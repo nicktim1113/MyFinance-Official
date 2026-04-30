@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFinanceApp - Personal Finance for Everyday Life and Travel</title>
+    <meta name="description" content="MyFinanceApp helps you track personal spending, organize multiple ledgers, parse transactions with AI assistance, and keep your records synced securely across devices.">
+    <meta name="keywords" content="MyFinanceApp, personal finance, expense tracker, budgeting app, travel budget, AI transaction parser">
+    <link rel="canonical" href="https://nicktim1113.github.io/MyFinance-Official/en/">
+    <link rel="alternate" hreflang="en" href="https://nicktim1113.github.io/MyFinance-Official/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://nicktim1113.github.io/MyFinance-Official/">
+    <link rel="alternate" hreflang="x-default" href="https://nicktim1113.github.io/MyFinance-Official/">
+
+    <meta property="og:title" content="MyFinanceApp - Personal Finance for Everyday Life and Travel">
+    <meta property="og:description" content="Track spending clearly, organize multiple ledgers, use AI-assisted entry, and keep your financial records synced across devices.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/en/">
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-image.jpg">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
+
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-5 h-16 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform text-white">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-800 tracking-wide">MyFinanceApp</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1">Home</a>
+                <a href="features.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Features</a>
+                <a href="about.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Developer</a>
+                <a href="privacy.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Privacy</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-3">
+                <a href="../index.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="zh-TW">
+                    中文
+                </a>
+                <a href="#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg">
+                    Download
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Open navigation menu">
+                    <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-lg z-40">
+            <div class="px-5 py-6 flex flex-col space-y-5">
+                <a href="index.html" class="text-indigo-600 font-bold flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> Home</a>
+                <a href="features.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-star w-6 text-slate-400"></i> Features</a>
+                <a href="about.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> Developer</a>
+                <a href="privacy.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> Privacy</a>
+                <a href="../index.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center" lang="zh-TW"><i class="fa-solid fa-language w-6 text-slate-400"></i> 中文</a>
+                <hr class="border-slate-100">
+                <a href="#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md w-full flex justify-center items-center">
+                    <i class="fa-brands fa-apple mr-2 text-xl"></i> Download
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="max-w-6xl mx-auto px-5 py-20 md:py-28 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <div class="inline-flex items-center px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold tracking-wider mb-6 border border-emerald-200">
+                    <i class="fa-solid fa-star mr-2"></i> Built for clear daily tracking
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Track your money clearly, <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">wherever life takes you.</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    MyFinanceApp helps you record expenses faster, organize multiple ledgers, review spending patterns, and keep your financial records with you across devices.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-indigo-200 inline-flex items-center justify-center">
+                        <i class="fa-brands fa-apple mr-2 text-xl"></i> App Store
+                    </a>
+                    <a href="features.html" class="bg-white border-2 border-slate-200 hover:border-indigo-200 hover:bg-indigo-50 text-slate-700 px-8 py-3 rounded-full font-bold transition-all inline-flex items-center justify-center">
+                        Explore Features
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-200 to-blue-100 rounded-full blur-3xl opacity-50 transform -translate-x-10 translate-y-10"></div>
+                <div class="relative bg-white border border-slate-100 p-8 rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                        <span class="font-bold text-slate-700">Recent Travel Spending</span>
+                        <i class="fa-solid fa-plane-departure text-indigo-400"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-xl">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3"><i class="fa-solid fa-ticket"></i></div>
+                                <span class="font-medium">Paris flight</span>
+                            </div>
+                            <span class="font-bold text-slate-800">-$1,020</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-xl">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mr-3"><i class="fa-solid fa-utensils"></i></div>
+                                <span class="font-medium">Dinner by the Seine</span>
+                            </div>
+                            <span class="font-bold text-slate-800">-$112</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-xl">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mr-3"><i class="fa-solid fa-train"></i></div>
+                                <span class="font-medium">Metro pass</span>
+                            </div>
+                            <span class="font-bold text-slate-800">-$28</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-5 pb-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-3">AI-assisted entry</h2>
+                <p class="text-slate-600 leading-relaxed text-sm">Type a natural phrase such as "ramen in Shinjuku, 1,200 yen" and let the app help structure the transaction.</p>
+            </div>
+            <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-cloud-arrow-up text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-3">Cloud sync</h2>
+                <p class="text-slate-600 leading-relaxed text-sm">Keep your records available across devices with secure account-based syncing powered by Firebase.</p>
+            </div>
+            <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-chart-pie text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-3">Readable reports</h2>
+                <p class="text-slate-600 leading-relaxed text-sm">Review categories, trends, and ledger-level spending so your decisions come from clear records.</p>
+            </div>
+        </section>
+
+        <section id="download" class="px-5 pb-24">
+            <div class="max-w-4xl mx-auto bg-slate-900 rounded-3xl p-10 text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold text-white mb-4">Ready to make your records easier to keep?</h2>
+                    <p class="text-slate-300 mb-8 max-w-xl mx-auto">
+                        Download MyFinanceApp from the App Store when the public listing is available, or contact the developer for support.
+                    </p>
+                    <a href="mailto:nicktim1113@icloud.com?subject=MyFinanceApp%20support" class="bg-white text-slate-900 hover:bg-indigo-50 px-8 py-4 rounded-full font-bold transition-all shadow-lg inline-flex items-center justify-center">
+                        <i class="fa-solid fa-envelope mr-2 text-xl"></i> Contact Support
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 md:py-16 mt-auto">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <div class="flex items-center space-x-2 mb-4 text-white">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span class="font-bold text-lg">MyFinanceApp</span>
+                </div>
+                <p>A modern personal finance tool for people who want clearer records at home and while traveling.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-white transition-colors text-indigo-400">Home</a></li>
+                    <li><a href="features.html" class="hover:text-white transition-colors">Features</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors">Developer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Legal & Support</h4>
+                <ul class="space-y-2">
+                    <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="mailto:nicktim1113@icloud.com" class="hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="../index.html" class="hover:text-white transition-colors" lang="zh-TW">中文版本</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-800 text-center text-xs">
+            <p>&copy; 2026 MyFinanceApp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於開發者 - MyFinanceApp</title>
-    <meta name="description" content="了解 MyFinanceApp 開發者 Huang Chi Wei 的背景與開發初衷，如何結合 AI 與最新網頁科技打造專屬於旅人的現代記帳工具。">
-    <meta name="keywords" content="MyFinanceApp, 記帳, 開發者, Huang Chi Wei, React, Firebase, AI">
-    <link rel="canonical" href="https://nicktim1113.github.io/MyFinance-Official/about.html">
-    <link rel="alternate" hreflang="zh-Hant" href="https://nicktim1113.github.io/MyFinance-Official/about.html">
+    <title>About the Developer - MyFinanceApp</title>
+    <meta name="description" content="Learn about Huang Chi Wei, the developer behind MyFinanceApp, and the product idea behind a clear, travel-friendly personal finance app.">
+    <meta name="keywords" content="MyFinanceApp, developer, Huang Chi Wei, personal finance app, AI, Firebase">
+    <link rel="canonical" href="https://nicktim1113.github.io/MyFinance-Official/en/about.html">
     <link rel="alternate" hreflang="en" href="https://nicktim1113.github.io/MyFinance-Official/en/about.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://nicktim1113.github.io/MyFinance-Official/about.html">
     <link rel="alternate" hreflang="x-default" href="https://nicktim1113.github.io/MyFinance-Official/about.html">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="關於開發者 - MyFinanceApp">
-    <meta property="og:description" content="了解 MyFinanceApp 開發者 Huang Chi Wei 的背景與開發初衷，如何結合 AI 與最新網頁科技打造專屬於旅人的現代記帳工具。">
+
+    <meta property="og:title" content="About the Developer - MyFinanceApp">
+    <meta property="og:description" content="Learn about the developer and the product principles behind MyFinanceApp.">
     <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/about.html">
+    <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/en/about.html">
     <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-image.jpg">
 
-    <!-- 召喚 Tailwind CSS 雲端裁縫師 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 召喚 FontAwesome 符文畫師 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-indigo-200 selection:text-indigo-900">
 
-    <!-- 城堡的頂部導航走廊 (Navigation Bar) -->
     <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-5 h-16 flex justify-between items-center">
-            <!-- 網站標誌 (Logo) -->
             <a href="index.html" class="flex items-center space-x-2 group">
                 <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform text-white">
                     <i class="fa-solid fa-wallet"></i>
@@ -37,53 +32,46 @@
                 <span class="font-bold text-xl text-slate-800 tracking-wide">MyFinanceApp</span>
             </a>
 
-            <!-- 魔法傳送門 (導覽連結) - 關於開發者設為啟動狀態 -->
             <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">首頁</a>
-                <a href="features.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">功能特色</a>
-                <a href="about.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1">關於開發者</a>
-                <a href="privacy.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">隱私權政策</a>
+                <a href="index.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Home</a>
+                <a href="features.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Features</a>
+                <a href="about.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1">Developer</a>
+                <a href="privacy.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Privacy</a>
             </nav>
 
-            <!-- 下載按鈕 -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="en/about.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="en">
-                    EN
+                <a href="../about.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="zh-TW">
+                    中文
                 </a>
                 <a href="index.html#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg">
-                    免費下載
+                    Download
                 </a>
             </div>
-            
-            <!-- 手機版魔法機關按鈕 (Mobile Menu Button) -->
+
             <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors">
+                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Open navigation menu">
                     <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
                 </button>
             </div>
         </div>
 
-        <!-- 手機版隱藏走廊 (Mobile Menu Dropdown) -->
         <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-lg z-40">
             <div class="px-5 py-6 flex flex-col space-y-5">
-                <a href="index.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> 首頁</a>
-                <a href="features.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-star w-6 text-slate-400"></i> 功能特色</a>
-                <a href="about.html" class="text-indigo-600 font-bold flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> 關於開發者</a>
-                <a href="privacy.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> 隱私權政策</a>
-                <a href="en/about.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center" lang="en"><i class="fa-solid fa-language w-6 text-slate-400"></i> English</a>
+                <a href="index.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> Home</a>
+                <a href="features.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-star w-6 text-slate-400"></i> Features</a>
+                <a href="about.html" class="text-indigo-600 font-bold flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> Developer</a>
+                <a href="privacy.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> Privacy</a>
+                <a href="../about.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center" lang="zh-TW"><i class="fa-solid fa-language w-6 text-slate-400"></i> 中文</a>
                 <hr class="border-slate-100">
                 <a href="index.html#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md w-full flex justify-center items-center">
-                    <i class="fa-brands fa-apple mr-2 text-xl"></i> 免費下載
+                    <i class="fa-brands fa-apple mr-2 text-xl"></i> Download
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 探險家傳記主視覺 (Profile Hero) -->
     <main class="flex-grow pb-20">
-        <!-- 頂部魔法星空背景 -->
         <div class="h-64 md:h-80 w-full bg-gradient-to-r from-slate-900 via-indigo-900 to-blue-900 relative overflow-hidden">
-            <!-- 裝飾用星軌圖案 -->
             <div class="absolute inset-0 opacity-20">
                 <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -97,102 +85,109 @@
             <div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
         </div>
 
-        <!-- 探險家資訊卡片 -->
         <div class="max-w-4xl mx-auto px-5 relative -mt-32">
             <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
-                
-                <!-- 頭像與基本資訊 -->
                 <div class="flex flex-col md:flex-row items-center md:items-end md:space-x-8 mb-10 text-center md:text-left border-b border-slate-100 pb-10">
-                    <!-- 魔法畫像 (Avatar Placeholder): 加入動畫與更佳的漸層 -->
                     <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-indigo-200 via-blue-100 to-indigo-50 border-4 border-white shadow-xl flex items-center justify-center shrink-0 mb-4 md:mb-0 relative overflow-hidden group">
-                        <!-- 脈衝光暈 -->
                         <div class="absolute inset-0 bg-indigo-400 opacity-20 group-hover:animate-ping rounded-full"></div>
-                        <!-- 未來你可以把這行 <i> 換成你的真實照片 <img> -->
                         <i class="fa-solid fa-user-astronaut text-5xl text-indigo-500 group-hover:scale-110 group-hover:text-indigo-600 transition-all duration-300 relative z-10"></i>
                     </div>
-                    
+
                     <div class="flex-grow">
                         <div class="inline-flex items-center px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold tracking-wider mb-3">
-                            <i class="fa-solid fa-compass mr-1.5"></i> 科技探險家
+                            <i class="fa-solid fa-compass mr-1.5"></i> Independent Developer
                         </div>
                         <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight mb-2">Huang Chi Wei</h1>
-                        <p class="text-slate-500 font-medium text-lg mb-4">渴望新知・熱愛旅遊・享受科學魔法</p>
-                        
+                        <p class="text-slate-500 font-medium text-lg mb-4">Curious about technology, travel, and useful digital tools.</p>
+
                         <div class="flex flex-wrap justify-center md:justify-start gap-3">
                             <a href="mailto:nicktim1113@icloud.com" class="inline-flex items-center justify-center px-4 py-2 bg-slate-50 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600 rounded-lg text-sm font-medium transition-colors border border-slate-200">
-                                <i class="fa-solid fa-envelope mr-2"></i> 聯絡我
+                                <i class="fa-solid fa-envelope mr-2"></i> Contact
                             </a>
-                            <a href="https://github.com/nicktim1113/MyFinance-Official" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center px-4 py-2 bg-slate-50 hover:bg-slate-100 text-slate-600 rounded-lg text-sm font-medium transition-colors border border-slate-200">
-                                <i class="fa-brands fa-github mr-2"></i> GitHub
+                            <a href="features.html" class="inline-flex items-center justify-center px-4 py-2 bg-slate-50 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600 rounded-lg text-sm font-medium transition-colors border border-slate-200">
+                                <i class="fa-solid fa-layer-group mr-2"></i> Product Features
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 故事章節 -->
                 <div class="space-y-12">
-                    
-                    <!-- 關於我 -->
                     <section>
                         <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
-                            <i class="fa-solid fa-book-open-reader text-indigo-500 mr-3"></i> 關於我的旅程
+                            <i class="fa-solid fa-book-open-reader text-indigo-500 mr-3"></i> About My Journey
                         </h2>
                         <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
-                            <p>你好！我是 MyFinanceApp 的創作者。在日常生活中，我是一個對<strong>科學與前沿科技</strong>充滿無限好奇心的人；而在假期裡，我則是一個背著背包、熱愛在世界地圖上標記新足跡的探險家。</p>
-                            <p>我相信科技不應該只是冰冷的程式碼，它更像是一種<strong>「現代魔法」</strong>——能夠幫助我們解決現實生活中的難題，讓旅途變得更加輕鬆優雅。對我來說，學習新知識就像是在探索未知的星系，每一次的突破都讓我感到無比興奮。</p>
+                            <p>Hello, I am the creator of <strong>MyFinanceApp</strong>. I have always been drawn to science, emerging technology, and the feeling of learning something new that changes how everyday life can work.</p>
+                            <p>Travel is another part of that curiosity. When I visit a new place, I want the practical things, including money records, to stay simple enough that they do not interrupt the experience.</p>
                         </div>
                     </section>
 
-                    <!-- 開發初衷 -->
                     <section>
                         <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
-                            <i class="fa-solid fa-lightbulb text-amber-500 mr-3"></i> 鍛造 MyFinanceApp 的初衷
+                            <i class="fa-solid fa-lightbulb text-amber-500 mr-3"></i> Why I Built MyFinanceApp
                         </h2>
                         <div class="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100">
                             <p class="text-slate-700 leading-relaxed italic mb-4">
-                                「當你在巴黎的塞納河畔享受咖啡，或是漫步在京都的古老街道時，最不該煩惱的就是：『我剛剛到底花了多少錢？』」
+                                When you are enjoying coffee by the Seine or walking through old streets in Kyoto, the last thing you want is a complicated expense form.
                             </p>
                             <p class="text-slate-600 leading-relaxed">
-                                過去在世界各地旅行時，我發現市面上的記帳軟體要不是太過複雜，就是缺乏智慧化的體驗。身為一個熱愛科技的人，我決定親手打造一個專屬於旅人與現代人的「智慧財務背包」。結合了最新的 <strong>AI 科技與雲端同步魔法</strong>，讓記錄花費變得像呼吸一樣自然，這就是 MyFinanceApp 誕生的故事。
+                                I built MyFinanceApp because many finance apps feel either too heavy for quick daily use or too limited when you need structure. The goal is to combine modern app design, AI-assisted entry, and cloud sync into a finance tool that feels clear, calm, and practical.
                             </p>
                         </div>
                     </section>
 
-                    <!-- 我的魔法裝備 (技術棧) -->
                     <section>
                         <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
-                            <i class="fa-solid fa-wand-magic-sparkles text-purple-500 mr-3"></i> 探險背包裡的科技魔法
+                            <i class="fa-solid fa-list-check text-emerald-500 mr-3"></i> Product Principles
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <h3 class="font-bold text-slate-800 mb-2">Fast to record</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">Transaction entry should stay lightweight, especially when you are busy or traveling.</p>
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <h3 class="font-bold text-slate-800 mb-2">Easy to trust</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">Financial records need clear structure, readable reports, and privacy-aware handling.</p>
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <h3 class="font-bold text-slate-800 mb-2">Ready to grow</h3>
+                                <p class="text-sm text-slate-600 leading-relaxed">Multiple ledgers and custom categories help the app fit different goals over time.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
+                            <i class="fa-solid fa-wand-magic-sparkles text-purple-500 mr-3"></i> Technology Behind the App
                         </h2>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                             <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
-                                <i class="fa-brands fa-react text-4xl text-blue-400 mb-2 group-hover:rotate-180 transition-transform duration-700"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">前端魔法陣</h3>
-                                <p class="text-xs text-slate-500 mt-1">React & Tailwind</p>
+                                <i class="fa-brands fa-swift text-4xl text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300"></i>
+                                <h3 class="font-bold text-slate-700 text-sm">iOS App</h3>
+                                <p class="text-xs text-slate-500 mt-1">SwiftUI</p>
                             </div>
                             <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
                                 <i class="fa-solid fa-cloud text-4xl text-amber-400 mb-2 group-hover:-translate-y-1 transition-transform"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">雲端記憶庫</h3>
-                                <p class="text-xs text-slate-500 mt-1">Firebase Firestore</p>
+                                <h3 class="font-bold text-slate-700 text-sm">Cloud Sync</h3>
+                                <p class="text-xs text-slate-500 mt-1">Firebase</p>
                             </div>
                             <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
                                 <i class="fa-solid fa-brain text-4xl text-purple-400 mb-2 group-hover:scale-110 transition-transform"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">AI 智慧解析</h3>
+                                <h3 class="font-bold text-slate-700 text-sm">AI Assistance</h3>
                                 <p class="text-xs text-slate-500 mt-1">Generative AI</p>
                             </div>
                             <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
                                 <i class="fa-solid fa-earth-americas text-4xl text-green-500 mb-2 group-hover:rotate-90 transition-transform duration-700"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">環球旅行魂</h3>
+                                <h3 class="font-bold text-slate-700 text-sm">Travel Mindset</h3>
                                 <p class="text-xs text-slate-500 mt-1">UX / UI Design</p>
                             </div>
                         </div>
                     </section>
-
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- 城堡地下室 (Footer) -->
     <footer class="bg-slate-900 text-slate-400 py-12 md:py-16 mt-auto">
         <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
             <div>
@@ -200,29 +195,30 @@
                     <i class="fa-solid fa-wallet"></i>
                     <span class="font-bold text-lg">MyFinanceApp</span>
                 </div>
-                <p>專為熱愛探索世界的你，打造的智慧財務管理工具。</p>
+                <p>A modern personal finance tool for people who want clearer records at home and while traveling.</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">快速連結</h4>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
                 <ul class="space-y-2">
-                    <li><a href="index.html" class="hover:text-white transition-colors">網站首頁</a></li>
-                    <li><a href="about.html" class="hover:text-white transition-colors text-indigo-400">關於開發者</a></li>
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="features.html" class="hover:text-white transition-colors">Features</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors text-indigo-400">Developer</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">法律與支援</h4>
+                <h4 class="text-white font-bold mb-4">Legal & Support</h4>
                 <ul class="space-y-2">
-                    <li><a href="privacy.html" class="hover:text-white transition-colors">隱私權政策</a></li>
-                    <li><a href="mailto:nicktim1113@icloud.com" class="hover:text-white transition-colors">聯絡我們</a></li>
+                    <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="mailto:nicktim1113@icloud.com" class="hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="../about.html" class="hover:text-white transition-colors" lang="zh-TW">中文版本</a></li>
                 </ul>
             </div>
         </div>
         <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-800 text-center text-xs">
-            <p>© 2026 MyFinanceApp. All rights reserved.</p>
+            <p>&copy; 2026 MyFinanceApp. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- 引入共用魔法咒語 (JavaScript) -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
