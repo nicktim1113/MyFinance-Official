@@ -54,20 +54,52 @@
     <nav class="lg:hidden fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 px-4 py-3 flex justify-between items-center shadow-sm">
         <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                <i class="fa-solid fa-shield-halved text-white text-sm"></i>
+                <i class="fa-solid fa-wallet text-white text-sm"></i>
             </div>
             <span class="font-bold text-slate-800 tracking-wide">MyFinanceApp</span>
         </a>
         <div class="flex items-center gap-2">
             <a href="../privacy.html" class="px-3 py-2 rounded-lg border border-slate-200 text-sm font-semibold text-slate-600 hover:text-indigo-600 hover:bg-indigo-50" lang="zh-TW">中文</a>
-            <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" aria-label="Open policy navigation">
-                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" aria-label="Open navigation menu">
+                <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
             </button>
         </div>
     </nav>
 
     <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 top-14 bg-white z-40 overflow-y-auto border-t border-slate-100">
-        <div class="p-4 space-y-1 pb-24" id="mobile-nav-container"></div>
+        <div class="px-5 py-6 flex flex-col space-y-5 pb-24">
+            <a href="index.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> Home</a>
+            <a href="features.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-star w-6 text-slate-400"></i> Features</a>
+            <a href="about.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> Developer</a>
+            <a href="privacy.html" class="text-indigo-600 font-bold flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> Privacy</a>
+            <hr class="border-slate-100">
+            <a href="index.html#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md w-full flex justify-center items-center">
+                <i class="fa-brands fa-apple mr-2 text-xl"></i> Download
+            </a>
+        </div>
+    </div>
+
+    <div id="mobile-section-menu" class="hidden lg:hidden fixed inset-0 top-14 bg-white z-40 overflow-y-auto border-t border-slate-100">
+        <div class="p-4 pb-28">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-indigo-600">Policy Contents</p>
+                    <h2 class="text-lg font-bold text-slate-800">Contents</h2>
+                </div>
+                <button id="section-menu-close-btn" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 hover:text-indigo-600" aria-label="Close contents">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="space-y-1" id="mobile-section-nav-container"></div>
+        </div>
+    </div>
+
+    <div class="lg:hidden fixed bottom-5 right-5 z-30">
+        <button id="section-menu-btn" class="inline-flex max-w-[calc(100vw-2.5rem)] items-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-bold text-white shadow-xl shadow-slate-900/20 hover:bg-indigo-700 transition-colors" aria-label="Open contents">
+            <i class="fa-solid fa-list"></i>
+            <span>Contents</span>
+            <span class="max-w-[7rem] truncate text-slate-300" id="section-menu-current">Service</span>
+        </button>
     </div>
 
     <div class="max-w-6xl mx-auto flex flex-col lg:flex-row pt-16 lg:pt-0">
@@ -422,21 +454,21 @@
 
     <script>
         const sections = [
-            { id: 'section-1', title: '1. Service', icon: 'fa-circle-info' },
-            { id: 'section-2', title: '2. Data Collected', icon: 'fa-database' },
-            { id: 'section-3', title: '3. Data Use', icon: 'fa-gear' },
-            { id: 'section-4', title: '4. Retention', icon: 'fa-box-archive' },
-            { id: 'section-5', title: '5. Third Parties', icon: 'fa-globe' },
-            { id: 'section-6', title: '6. User Rights', icon: 'fa-user-check' },
-            { id: 'section-7', title: '7. Account Deletion', icon: 'fa-user-xmark' },
-            { id: 'section-8', title: '8. Disclaimer', icon: 'fa-triangle-exclamation' },
-            { id: 'section-9', title: '9. IP Rights', icon: 'fa-copyright' },
-            { id: 'section-10', title: '10. Updates', icon: 'fa-pen-to-square' },
-            { id: 'section-11', title: '11. Contact', icon: 'fa-envelope' }
+            { id: 'section-1', title: '1. Service', shortTitle: 'Service', icon: 'fa-circle-info' },
+            { id: 'section-2', title: '2. Data Collected', shortTitle: 'Data', icon: 'fa-database' },
+            { id: 'section-3', title: '3. Data Use', shortTitle: 'Use', icon: 'fa-gear' },
+            { id: 'section-4', title: '4. Retention', shortTitle: 'Retention', icon: 'fa-box-archive' },
+            { id: 'section-5', title: '5. Third Parties', shortTitle: 'Third Parties', icon: 'fa-globe' },
+            { id: 'section-6', title: '6. User Rights', shortTitle: 'Rights', icon: 'fa-user-check' },
+            { id: 'section-7', title: '7. Account Deletion', shortTitle: 'Deletion', icon: 'fa-user-xmark' },
+            { id: 'section-8', title: '8. Disclaimer', shortTitle: 'Disclaimer', icon: 'fa-triangle-exclamation' },
+            { id: 'section-9', title: '9. IP Rights', shortTitle: 'IP Rights', icon: 'fa-copyright' },
+            { id: 'section-10', title: '10. Updates', shortTitle: 'Updates', icon: 'fa-pen-to-square' },
+            { id: 'section-11', title: '11. Contact', shortTitle: 'Contact', icon: 'fa-envelope' }
         ];
 
         const desktopContainer = document.getElementById('desktop-nav-container');
-        const mobileContainer = document.getElementById('mobile-nav-container');
+        const mobileSectionContainer = document.getElementById('mobile-section-nav-container');
 
         sections.forEach((sec) => {
             const desktopBtn = document.createElement('button');
@@ -461,7 +493,7 @@
                 </span>
                 ${sec.title}
             `;
-            mobileContainer.appendChild(mobileBtn);
+            mobileSectionContainer.appendChild(mobileBtn);
         });
 
         updateActiveNav('section-1');
@@ -489,6 +521,12 @@
                     icon.classList.replace('text-indigo-600', 'text-slate-400');
                 }
             });
+
+            const activeSection = sections.find(sec => sec.id === activeId);
+            const currentLabel = document.getElementById('section-menu-current');
+            if (activeSection && currentLabel) {
+                currentLabel.textContent = activeSection.shortTitle;
+            }
         }
 
         window.addEventListener('scroll', () => {
@@ -516,17 +554,23 @@
                     behavior: 'smooth'
                 });
                 updateActiveNav(id);
-                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
-                    toggleMobileMenu();
+                if (!document.getElementById('mobile-section-menu').classList.contains('hidden')) {
+                    toggleSectionMenu();
                 }
             }
         }
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+        const menuIcon = document.getElementById('mobile-menu-icon');
+        const sectionMenuBtn = document.getElementById('section-menu-btn');
+        const sectionMenuCloseBtn = document.getElementById('section-menu-close-btn');
+        const mobileSectionMenu = document.getElementById('mobile-section-menu');
 
         function toggleMobileMenu() {
+            if (!mobileSectionMenu.classList.contains('hidden')) {
+                toggleSectionMenu();
+            }
             mobileMenu.classList.toggle('hidden');
             if (mobileMenu.classList.contains('hidden')) {
                 menuIcon.classList.replace('fa-xmark', 'fa-bars');
@@ -535,7 +579,16 @@
             }
         }
 
+        function toggleSectionMenu() {
+            if (!mobileMenu.classList.contains('hidden')) {
+                toggleMobileMenu();
+            }
+            mobileSectionMenu.classList.toggle('hidden');
+        }
+
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        sectionMenuBtn.addEventListener('click', toggleSectionMenu);
+        sectionMenuCloseBtn.addEventListener('click', toggleSectionMenu);
     </script>
 </body>
 </html>
