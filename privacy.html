@@ -147,7 +147,7 @@
             <div class="mb-16 border-b border-slate-100 pb-10">
                 <div class="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold tracking-wider mb-6">
                     <span class="w-2 h-2 rounded-full bg-indigo-500 mr-2 animate-pulse"></span>
-                    更新日期：2026 年
+                    更新日期：2026 年 5 月 8 日
                 </div>
                 <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
                     使用者條款與 <br class="hidden lg:block"/>
@@ -204,16 +204,19 @@
                             
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                                 <h4 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">1</span> 使用者帳號資訊</h4>
-                                <p class="text-slate-600 mb-2">當您使用登入功能時，可能會蒐集：</p>
+                                <p class="text-slate-600 mb-2">當您使用 Email、Google 登入或 Apple 登入等功能時，可能會蒐集：</p>
                                 <ul class="list-disc pl-6 mb-3 text-slate-600 space-y-1">
                                     <li>電子郵件地址</li>
                                     <li>使用者識別資訊（Firebase Auth ID）</li>
+                                    <li>登入提供者資訊（例如 Google 或 Apple）</li>
+                                    <li>使用者名稱、頭像網址或登入提供者回傳的基本帳號資訊（若您授權提供）</li>
                                 </ul>
                                 <p class="text-slate-600 mb-2">此資訊僅用於：</p>
                                 <ul class="list-disc pl-6 text-slate-600 space-y-1">
                                     <li>使用者身份驗證</li>
                                     <li>跨裝置同步資料</li>
                                     <li>帳戶管理</li>
+                                    <li>在 App 內顯示帳號狀態或個人化頭像</li>
                                 </ul>
                             </div>
                     
@@ -240,18 +243,30 @@
                     
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                                 <h4 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">3</span> AI 功能資料</h4>
-                                <p class="text-slate-600 mb-2">若您使用 AI 交易解析功能：</p>
-                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">您輸入的文字可能會被傳送至雲端 AI 服務進行分析，以協助解析交易資訊。</p>
+                                <p class="text-slate-600 mb-2">若您主動使用 AI 交易解析功能：</p>
+                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">您輸入的文字，以及解析所需的有限上下文（例如目前帳本、可用分類或語言設定），可能會透過 Firebase Cloud Functions 傳送至 Google Gemini 或其他雲端 AI 服務進行分析，以協助產生交易草稿。</p>
                                 <p class="text-slate-600 mb-2">該資料僅用於：</p>
                                 <ul class="list-disc pl-6 mb-3 text-slate-600 space-y-1">
                                     <li>解析交易內容</li>
                                     <li>回傳解析結果</li>
+                                    <li>計算或限制 AI 使用額度，防止濫用</li>
                                 </ul>
-                                <p class="text-slate-500 text-sm italic">註：AI 服務提供者可能會依其服務條款處理資料。</p>
+                                <p class="text-slate-500 text-sm italic">AI 解析結果僅作為交易草稿，使用者可在儲存前檢查與修改。AI 功能不提供投資、稅務、法律或財務建議。</p>
+                            </div>
+
+                            <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                <h4 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">4</span> 訂閱與 App 內購買資訊</h4>
+                                <p class="text-slate-600 mb-2">當您購買訂閱或 App 內購買項目時，付款流程由 Apple App Store / StoreKit 處理。本應用程式不會取得、儲存或處理您的信用卡號碼、付款卡安全碼或 Apple ID 付款憑證。</p>
+                                <p class="text-slate-600 mb-2">本應用程式可能會讀取 Apple 回傳的購買狀態，用於：</p>
+                                <ul class="list-disc pl-6 text-slate-600 space-y-1">
+                                    <li>解鎖訂閱或一次性購買功能</li>
+                                    <li>恢復購買項目</li>
+                                    <li>確認目前有效的會員或功能權益</li>
+                                </ul>
                             </div>
                     
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <h4 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">4</span> 技術資料</h4>
+                                <h4 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">5</span> 技術資料</h4>
                                 <p class="text-slate-600 mb-2">為維持系統運作，本應用程式可能蒐集：</p>
                                 <ul class="list-disc pl-6 mb-3 text-slate-600 space-y-1">
                                     <li>裝置類型</li>
@@ -306,6 +321,9 @@
                             <i class="fa-solid fa-triangle-exclamation mr-2 text-amber-600"></i>
                             本應用程式 不會 販售或出租您的個人資料。
                         </div>
+                        <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                            本應用程式不會使用您的資料進行第三方廣告追蹤，也不會將您的財務資料提供給資料仲介或第三方行銷平台。若需要與第三方服務分享資料，僅會在提供 App 功能、登入、同步、AI 解析、購買驗證或維護安全所必要的範圍內進行。
+                        </p>
                     </div>
                 </section>
 
@@ -346,12 +364,12 @@
                         <h2 class="text-2xl font-bold text-slate-800">五、第三方服務</h2>
                     </div>
                     <div class="pl-0 lg:pl-16">
-                        <p class="mb-4 text-slate-600 leading-relaxed">本應用程式可能使用以下第三方服務：</p>
+                        <p class="mb-4 text-slate-600 leading-relaxed">本應用程式可能使用以下第三方服務。這些第三方服務僅會在提供 App 功能所必要的範圍內處理資料，並應依其隱私政策、服務條款與適用法律提供相當程度的資料保護：</p>
                         <div class="space-y-4 mb-4">
                             <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between">
                                 <div class="mb-2 sm:mb-0">
-                                    <h5 class="font-bold text-slate-800 text-lg">Firebase (Google)</h5>
-                                    <p class="text-slate-500 text-sm mt-1">使用於帳號登入與資料同步</p>
+                                    <h5 class="font-bold text-slate-800 text-lg">Firebase / Google Cloud (Google)</h5>
+                                    <p class="text-slate-500 text-sm mt-1">使用於帳號登入、資料同步、App Check、雲端函式與 AI 額度控管</p>
                                 </div>
                                 <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" class="text-indigo-600 text-sm font-medium hover:text-indigo-800 flex items-center">
                                     查看隱私政策 <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
@@ -359,10 +377,19 @@
                             </div>
                             <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between">
                                 <div class="mb-2 sm:mb-0">
-                                    <h5 class="font-bold text-slate-800 text-lg">AI 服務</h5>
-                                    <p class="text-slate-500 text-sm mt-1">Google Gemini 或其他 AI 服務，用於解析交易文字</p>
+                                    <h5 class="font-bold text-slate-800 text-lg">Apple App Store / StoreKit</h5>
+                                    <p class="text-slate-500 text-sm mt-1">使用於訂閱、App 內購買、恢復購買與購買狀態驗證</p>
                                 </div>
-                                <span class="text-slate-400 text-sm italic">依其服務條款處理</span>
+                                <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer" class="text-indigo-600 text-sm font-medium hover:text-indigo-800 flex items-center">
+                                    查看 Apple 隱私權政策 <i class="fa-solid fa-chevron-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                            <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between">
+                                <div class="mb-2 sm:mb-0">
+                                    <h5 class="font-bold text-slate-800 text-lg">AI 服務</h5>
+                                    <p class="text-slate-500 text-sm mt-1">Google Gemini 或其他 AI 服務，用於使用者主動觸發的交易文字解析</p>
+                                </div>
+                                <span class="text-slate-400 text-sm italic">僅用於回傳解析結果</span>
                             </div>
                         </div>
                     </div>
