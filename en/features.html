@@ -3,248 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - MyFinanceApp</title>
-    <meta name="description" content="Explore MyFinanceApp features including AI-assisted transaction entry, Firebase cloud sync, multiple ledgers, custom categories, and visual finance reports.">
-    <meta name="keywords" content="MyFinanceApp, features, AI transaction parsing, cloud sync, multiple ledgers, financial reports">
+    <title>Features - MyFinance Go</title>
+    <meta name="description" content="Explore MyFinance Go features including AI-assisted transaction drafts, multiple ledgers, shared ledgers, cloud sync, reports, budgets, assets, offset tracking, CSV import/export, and StoreKit memberships.">
+    <meta name="keywords" content="MyFinance Go features, AI expense tracker, shared ledger, budget tracker, asset management, CSV import export">
     <link rel="canonical" href="https://nicktim1113.github.io/MyFinance-Official/en/features.html">
     <link rel="alternate" hreflang="en" href="https://nicktim1113.github.io/MyFinance-Official/en/features.html">
     <link rel="alternate" hreflang="zh-Hant" href="https://nicktim1113.github.io/MyFinance-Official/features.html">
     <link rel="alternate" hreflang="ja" href="https://nicktim1113.github.io/MyFinance-Official/ja/features.html">
     <link rel="alternate" hreflang="x-default" href="https://nicktim1113.github.io/MyFinance-Official/features.html">
-
-    <meta property="og:title" content="Features - MyFinanceApp">
-    <meta property="og:description" content="AI-assisted entry, secure cloud sync, multiple ledgers, custom categories, and readable finance reports.">
+    <link rel="icon" type="image/png" href="../assets/images/app-logo.png">
+    <meta property="og:title" content="Features - MyFinance Go">
+    <meta property="og:description" content="AI transaction drafts, reports, budgets, assets, shared ledgers, CSV import/export, and optional StoreKit upgrades in one personal finance app.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/en/features.html">
-    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-image.jpg">
-
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/app-logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-indigo-200 selection:text-indigo-900 overflow-x-hidden">
-
-    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-teal-100 selection:text-teal-900">
+    <header class="bg-white/95 product-glass border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-5 h-16 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2 group">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform text-white">
-                    <i class="fa-solid fa-wallet"></i>
-                </div>
-                <span class="font-bold text-base sm:text-xl text-slate-800 tracking-wide">MyFinanceApp</span>
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="../assets/images/app-logo.png" alt="MyFinance Go" class="w-9 h-9 rounded-lg app-logo-mark">
+                <span class="font-bold text-base sm:text-xl text-slate-900">MyFinance Go</span>
             </a>
-
-            <nav class="hidden lg:flex space-x-8">
-                <a href="index.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Home</a>
-                <a href="features.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1">Features</a>
-                <a href="about.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Developer</a>
-                <a href="privacy.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">Privacy</a>
+            <nav class="hidden lg:flex items-center gap-7">
+                <a href="index.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">Home</a>
+                <a href="features.html" class="text-teal-700 font-semibold border-b-2 border-teal-600 pb-1">Features</a>
+                <a href="about.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">About</a>
+                <a href="privacy.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">Privacy</a>
             </nav>
-
             <div class="hidden lg:flex items-center gap-3">
-                <a href="../features.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="zh-TW">
-                    中文
-                </a>
-                <a href="../ja/features.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="ja">
-                    日本語
-                </a>
-                <a href="index.html#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg">
-                    Download
+                <a href="../features.html" class="px-3 py-2 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-200 hover:bg-teal-50 text-sm font-semibold transition-colors" lang="zh-TW">中文</a>
+                <a href="../ja/features.html" class="px-3 py-2 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-200 hover:bg-teal-50 text-sm font-semibold transition-colors" lang="ja">日本語</a>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-slate-900 hover:bg-teal-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
+                    <i class="fa-brands fa-apple mr-2"></i> App Store
                 </a>
             </div>
-
             <div class="lg:hidden flex items-center gap-2">
-                <a href="../features.html" class="inline-flex items-center px-2.5 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-xs font-semibold transition-colors" lang="zh-TW" aria-label="繁體中文版">
-                    中
-                </a>
-                <a href="../ja/features.html" class="inline-flex items-center px-2.5 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-xs font-semibold transition-colors" lang="ja" aria-label="日本語版">
-                    日
-                </a>
-                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Open navigation menu">
+                <a href="../features.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="zh-TW" aria-label="Traditional Chinese version">中</a>
+                <a href="../ja/features.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="ja" aria-label="Japanese version">日</a>
+                <button id="mobile-menu-btn" class="text-slate-600 hover:text-teal-700 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Open menu">
                     <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
                 </button>
             </div>
         </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-lg z-40">
-            <div class="px-5 py-6 flex flex-col space-y-5">
-                <a href="index.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> Home</a>
-                <a href="features.html" class="text-indigo-600 font-bold flex items-center"><i class="fa-solid fa-star w-6 text-slate-400"></i> Features</a>
-                <a href="about.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> Developer</a>
-                <a href="privacy.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> Privacy</a>
-                <hr class="border-slate-100">
-                <a href="index.html#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md w-full flex justify-center items-center">
-                    <i class="fa-brands fa-apple mr-2 text-xl"></i> Download
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 w-full bg-white/95 product-glass border-b border-slate-200 shadow-lg z-40">
+            <div class="px-5 py-6 flex flex-col gap-5">
+                <a href="index.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> Home</a>
+                <a href="features.html" class="text-teal-700 font-bold flex items-center"><i class="fa-solid fa-chart-line w-6 text-slate-400"></i> Features</a>
+                <a href="about.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> About</a>
+                <a href="privacy.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> Privacy</a>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-slate-900 hover:bg-teal-700 text-white px-5 py-3 rounded-lg font-bold transition-colors w-full flex justify-center items-center">
+                    <i class="fa-brands fa-apple mr-2 text-xl"></i> View on App Store
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow pb-20">
-        <section class="px-5 pt-12 pb-8 md:pt-20 md:pb-16 text-center max-w-3xl mx-auto">
-            <div class="inline-flex items-center px-4 py-1.5 bg-indigo-50 text-indigo-600 rounded-full text-sm font-bold tracking-widest mb-6 uppercase border border-indigo-100">
-                <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Core Features
-            </div>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
-                Personal finance tools for <br class="hidden md:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-500">clearer everyday decisions</span>
-            </h1>
-            <p class="text-lg text-slate-600 px-4 md:px-0">
-                MyFinanceApp combines quick entry, structured ledgers, secure sync, and readable reports so you can spend less time organizing records and more time understanding them.
-            </p>
-        </section>
-
-        <section class="max-w-6xl mx-auto px-5 mb-16">
-            <div class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 overflow-hidden mb-8 md:flex md:items-center transform transition duration-500 hover:shadow-xl hover:-translate-y-1">
-                <div class="md:w-1/2 p-8 md:p-12 relative overflow-hidden bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
-                    <div class="absolute -right-10 -bottom-10 opacity-20 animate-float">
-                        <i class="fa-solid fa-brain text-[15rem]"></i>
-                    </div>
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 border border-white/30">
-                            <i class="fa-solid fa-pen-nib text-2xl"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold mb-4">AI-assisted transaction entry</h2>
-                        <h3 class="text-indigo-200 font-semibold mb-4 tracking-wide">Turn natural text into structured records</h3>
-                        <p class="text-indigo-50 leading-relaxed opacity-90">
-                            Instead of manually choosing every field, enter a short phrase such as "ramen in Shinjuku, 1,200 yen today." The AI-assisted parser helps identify the amount, date, category, and note so the record is easier to complete.
-                        </p>
-                    </div>
-                </div>
-                <div class="md:w-1/2 p-8 flex justify-center items-center bg-slate-50">
-                    <div class="w-64 h-80 bg-white rounded-[2rem] shadow-lg border-4 border-slate-200 p-4 relative overflow-hidden">
-                        <div class="w-16 h-1 bg-slate-200 rounded-full mx-auto mb-4"></div>
-                        <div class="bg-indigo-50 text-indigo-700 p-3 rounded-2xl text-sm mb-4 rounded-tl-none">
-                            "45 euros for souvenirs at the Louvre"
-                        </div>
-                        <div class="flex justify-center my-2">
-                            <i class="fa-solid fa-arrow-down text-slate-300 animate-bounce"></i>
-                        </div>
-                        <div class="bg-white border border-slate-100 shadow-sm p-4 rounded-xl mt-2">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded"><i class="fa-solid fa-gift mr-1"></i> Shopping</span>
-                                <span class="text-slate-400 text-xs">Today</span>
-                            </div>
-                            <div class="font-bold text-lg text-slate-800">EUR 45.00</div>
-                            <div class="text-sm text-slate-500 mt-1">Louvre souvenirs</div>
-                        </div>
-                        <div class="absolute bottom-4 right-4 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white shadow-lg animate-pulse">
-                            <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group">
-                    <div class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Secure cloud sync</h3>
-                    <h4 class="text-sm font-bold text-blue-500 mb-3">Firebase account-based synchronization</h4>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        Keep your records available when you change devices or use more than one device. Sign in securely and let your ledgers travel with you.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group">
-                    <div class="w-14 h-14 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-book-bookmark text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Multiple ledgers</h3>
-                    <h4 class="text-sm font-bold text-amber-500 mb-3">Separate records for different goals</h4>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        Create dedicated ledgers for daily spending, travel plans, shared expenses, or savings goals so each area stays organized.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow group">
-                    <div class="w-14 h-14 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
-                        <i class="fa-solid fa-chart-pie text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-2">Visual reports</h3>
-                    <h4 class="text-sm font-bold text-emerald-500 mb-3">Readable statistics and spending trends</h4>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        Review spending by category, period, and ledger with charts that make your financial patterns easier to understand.
-                    </p>
-                </div>
+    <main class="flex-grow">
+        <section class="hero-surface border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-5 py-16 md:py-20">
+                <p class="text-sm font-bold text-teal-700 mb-4">Features</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 leading-tight mb-5 max-w-3xl">
+                    From the first transaction to the rhythm of the whole month.
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
+                    MyFinance Go combines everyday tracking, AI assistance, shared sync, reports, and advanced finance tools into a clear workflow. Start free, then unlock more capabilities when you need them.
+                </p>
             </div>
         </section>
 
-        <section class="max-w-6xl mx-auto px-5 mb-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-slate-100 text-slate-700 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fa-solid fa-list-check text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800">Custom categories</h3>
+        <section class="max-w-6xl mx-auto px-5 py-16">
+            <div class="grid lg:grid-cols-2 gap-6">
+                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                    <div class="w-12 h-12 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
                     </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        Adapt your category structure to how you actually spend, from recurring household costs to one-time travel categories.
-                    </p>
-                </div>
-                <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-slate-100 text-slate-700 rounded-xl flex items-center justify-center mr-4">
-                            <i class="fa-solid fa-shield-halved text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800">Privacy-aware design</h3>
+                    <h2 class="text-2xl font-bold text-slate-950 mb-3">AI-assisted transaction drafts</h2>
+                    <p class="text-slate-600 leading-relaxed mb-5">Enter natural text such as "breakfast 85, metro 30, coffee 120 today" and the app helps turn it into transaction drafts. AI helps parse and organize; you still review before saving.</p>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Review amount, date, category, and note before saving</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Supports multiple drafts and local fallback parsing</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Does not provide investment, tax, legal, or financial advice</li>
+                    </ul>
+                </article>
+
+                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-gauge-high text-xl"></i>
                     </div>
-                    <p class="text-slate-600 leading-relaxed">
-                        Your records are used to provide the app experience. They are not sold or provided to third parties for marketing purposes.
-                    </p>
+                    <h2 class="text-2xl font-bold text-slate-950 mb-3">Dashboard and report insights</h2>
+                    <p class="text-slate-600 leading-relaxed mb-5">Use the dashboard for current-period summaries, recent transactions, recurring candidates, and forward-looking cash flow, then review trends and rankings in reports.</p>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Daily trends, category rankings, and period comparisons</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Optional AI report summaries with supporting evidence</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> 14-day cash-flow view and recurring transaction hints</li>
+                    </ul>
+                </article>
+
+                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                    <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-book-open text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-950 mb-3">Multiple ledgers and shared sync</h2>
+                    <p class="text-slate-600 leading-relaxed mb-5">Keep daily life, travel, family, or shared expenses in separate ledgers. Sign in to use cloud sync and shared ledgers when multiple people need the same view.</p>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> SwiftData local records with Firebase sync</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Ledger switching, shared members, and collaboration flows</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Useful for individuals, partners, families, and travel groups</li>
+                    </ul>
+                </article>
+
+                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                    <div class="w-12 h-12 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-scale-balanced text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-950 mb-3">Budgets, assets, and offsets</h2>
+                    <p class="text-slate-600 leading-relaxed mb-5">Finance Management combines budget tracking, asset records, and offset tools for reimbursements, loans, repayments, and transactions that need to be settled.</p>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Budget progress and category goals</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Asset tracking with optional expanded limits</li>
+                        <li><i class="fa-solid fa-check text-teal-600 mr-2"></i> Offset net statistics and history review</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="bg-white border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-5 py-16">
+                <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-10">
+                    <div>
+                        <p class="text-sm font-bold text-teal-700 mb-3">Data and upgrades</p>
+                        <h2 class="text-3xl font-extrabold text-slate-950 mb-4">Bring records with you, and upgrade only when it helps.</h2>
+                        <p class="text-slate-600 leading-relaxed">MyFinance Go uses a free basic version with optional subscriptions and non-consumable modules. This website describes the features; all purchases are handled by Apple App Store / StoreKit.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="border border-slate-200 rounded-lg p-5">
+                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-file-csv text-emerald-600 mr-2"></i> CSV import and export</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Useful for cleaning up old records, backing up data, or moving from another tracking workflow.</p>
+                        </div>
+                        <div class="border border-slate-200 rounded-lg p-5">
+                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-rotate-left text-blue-600 mr-2"></i> Backups and restore purchases</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Use backup/import flows and restore App Store entitlements from the Settings screen.</p>
+                        </div>
+                        <div class="border border-slate-200 rounded-lg p-5">
+                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-crown text-amber-600 mr-2"></i> VIP subscriptions</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Unlock more ledgers, collaboration, themes, AI allowance, and transaction capacity according to the in-app plan.</p>
+                        </div>
+                        <div class="border border-slate-200 rounded-lg p-5">
+                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-puzzle-piece text-rose-600 mr-2"></i> One-time modules</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Advanced insights, asset expansion, CSV tools, and offset net statistics can be unlocked when needed.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="px-5 mb-10">
-            <div class="max-w-4xl mx-auto bg-slate-900 rounded-3xl p-10 text-center relative overflow-hidden shadow-2xl">
-                <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
-                <div class="relative z-10">
-                    <h2 class="text-3xl font-bold text-white mb-4">A calmer way to keep financial records</h2>
-                    <p class="text-slate-300 mb-8 max-w-xl mx-auto">
-                        Start with simple records, then use ledgers, categories, sync, and reports as your needs grow.
-                    </p>
-                    <a href="index.html#download" class="bg-white text-slate-900 hover:bg-indigo-50 px-8 py-4 rounded-full font-bold transition-all shadow-lg inline-flex items-center mx-auto group">
-                        <i class="fa-brands fa-apple mr-2 text-2xl group-hover:-mt-1 transition-all"></i> Download Information
-                    </a>
+        <section class="max-w-6xl mx-auto px-5 py-16">
+            <div class="bg-slate-900 rounded-lg p-8 md:p-10 grid md:grid-cols-[1fr_auto] gap-6 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white mb-3">Download the released version of MyFinance Go</h2>
+                    <p class="text-slate-300 leading-relaxed">Start with the free basics, then upgrade if your tracking, sharing, or analysis needs grow.</p>
                 </div>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-white text-slate-950 hover:bg-teal-50 px-6 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center">
+                    <i class="fa-brands fa-apple mr-2 text-xl"></i> App Store
+                </a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 md:py-16 mt-auto">
+    <footer class="bg-white border-t border-slate-200 text-slate-500 py-12 mt-auto">
         <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
             <div>
-                <div class="flex items-center space-x-2 mb-4 text-white">
-                    <i class="fa-solid fa-wallet"></i>
-                    <span class="font-bold text-lg">MyFinanceApp</span>
+                <div class="flex items-center gap-2 mb-4 text-slate-900">
+                    <img src="../assets/images/app-logo.png" alt="" class="w-8 h-8 rounded-lg">
+                    <span class="font-bold text-lg">MyFinance Go</span>
                 </div>
-                <p>A modern personal finance tool for people who want clearer records at home and while traveling.</p>
+                <p>AI-assisted expense tracking, clear reports, and multi-ledger sync for everyday personal finance.</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <h4 class="text-slate-900 font-bold mb-4">Navigation</h4>
                 <ul class="space-y-2">
-                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
-                    <li><a href="features.html" class="hover:text-white transition-colors text-indigo-400">Features</a></li>
-                    <li><a href="about.html" class="hover:text-white transition-colors">Developer</a></li>
+                    <li><a href="index.html" class="hover:text-teal-700 transition-colors">Home</a></li>
+                    <li><a href="features.html" class="hover:text-teal-700 transition-colors">Features</a></li>
+                    <li><a href="about.html" class="hover:text-teal-700 transition-colors">About</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Legal & Support</h4>
+                <h4 class="text-slate-900 font-bold mb-4">Download & Support</h4>
                 <ul class="space-y-2">
-                    <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                    <li><a href="mailto:nicktim1113@icloud.com" class="hover:text-white transition-colors">Contact</a></li>
-                    <li><a href="../features.html" class="hover:text-white transition-colors" lang="zh-TW">中文版本</a></li>
-                    <li><a href="../ja/features.html" class="hover:text-white transition-colors" lang="ja">日本語</a></li>
+                    <li><a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="hover:text-teal-700 transition-colors">App Store</a></li>
+                    <li><a href="privacy.html" class="hover:text-teal-700 transition-colors">Privacy Policy</a></li>
+                    <li><a href="mailto:nicktim1113@icloud.com?subject=MyFinance%20Go%20support" class="hover:text-teal-700 transition-colors">Contact Support</a></li>
+                    <li><a href="../features.html" class="hover:text-teal-700 transition-colors" lang="zh-TW">繁體中文</a> · <a href="../ja/features.html" class="hover:text-teal-700 transition-colors" lang="ja">日本語</a></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-800 text-center text-xs">
-            <p>&copy; 2026 MyFinanceApp. All rights reserved.</p>
+        <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-200 text-center text-xs">
+            <p>© 2026 MyFinance Go. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
