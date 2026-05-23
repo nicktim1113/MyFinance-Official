@@ -3,232 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>開発者について - MyFinanceApp</title>
-    <meta name="description" content="MyFinanceAppの開発者 Huang Chi Wei と、日常や旅行中でも使いやすい個人向け家計管理アプリを作った背景を紹介します。">
-    <meta name="keywords" content="MyFinanceApp, 開発者, Huang Chi Wei, 家計管理アプリ, AI, Firebase">
+    <title>開発者について - MyFinance Go</title>
+    <meta name="description" content="MyFinance Goの開発背景をご紹介します。Huang Chi Weiが、分かりやすい操作、利用者による確認、AI入力補助、プライバシーに配慮した同期、iOSらしい使いやすさを重視して作った家計管理アプリです。">
+    <meta name="keywords" content="MyFinance Go, Huang Chi Wei, 家計管理アプリ, SwiftUI, SwiftData, Firebase, StoreKit">
     <link rel="canonical" href="https://nicktim1113.github.io/MyFinance-Official/ja/about.html">
     <link rel="alternate" hreflang="ja" href="https://nicktim1113.github.io/MyFinance-Official/ja/about.html">
     <link rel="alternate" hreflang="zh-Hant" href="https://nicktim1113.github.io/MyFinance-Official/about.html">
     <link rel="alternate" hreflang="en" href="https://nicktim1113.github.io/MyFinance-Official/en/about.html">
     <link rel="alternate" hreflang="x-default" href="https://nicktim1113.github.io/MyFinance-Official/about.html">
-
-    <meta property="og:title" content="開発者について - MyFinanceApp">
-    <meta property="og:description" content="MyFinanceAppの開発者と、プロダクトの考え方について紹介します。">
+    <link rel="icon" type="image/png" href="../assets/images/app-logo.png">
+    <meta property="og:title" content="開発者について - MyFinance Go">
+    <meta property="og:description" content="MyFinance Goの考え方。すばやい記録、確認できるAI、見やすいレポート、プライバシーに配慮した家計管理。">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/ja/about.html">
-    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-image.jpg">
-
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/app-logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-indigo-200 selection:text-indigo-900">
-
-    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-teal-100 selection:text-teal-900">
+    <header class="bg-white/95 product-glass border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-5 h-16 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2 group">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform text-white">
-                    <i class="fa-solid fa-wallet"></i>
-                </div>
-                <span class="font-bold text-base sm:text-xl text-slate-800 tracking-wide">MyFinanceApp</span>
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="../assets/images/app-logo.png" alt="MyFinance Go" class="w-9 h-9 rounded-lg app-logo-mark">
+                <span class="font-bold text-base sm:text-xl text-slate-900">MyFinance Go</span>
             </a>
-
-            <nav class="hidden lg:flex space-x-8">
-                <a href="index.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">ホーム</a>
-                <a href="features.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">機能</a>
-                <a href="about.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1">開発者について</a>
-                <a href="privacy.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">プライバシー</a>
+            <nav class="hidden lg:flex items-center gap-7">
+                <a href="index.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">ホーム</a>
+                <a href="features.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">機能</a>
+                <a href="about.html" class="text-teal-700 font-semibold border-b-2 border-teal-600 pb-1">開発者について</a>
+                <a href="privacy.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">プライバシー</a>
             </nav>
-
             <div class="hidden lg:flex items-center gap-3">
-                <a href="../about.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="zh-TW">
-                    中文
-                </a>
-                <a href="../en/about.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="en">
-                    EN
-                </a>
-                <a href="index.html#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg">
-                    ダウンロード情報
+                <a href="../about.html" class="px-3 py-2 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-200 hover:bg-teal-50 text-sm font-semibold transition-colors" lang="zh-TW">中文</a>
+                <a href="../en/about.html" class="px-3 py-2 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-200 hover:bg-teal-50 text-sm font-semibold transition-colors" lang="en">EN</a>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-slate-900 hover:bg-teal-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
+                    <i class="fa-brands fa-apple mr-2"></i> App Store
                 </a>
             </div>
-
             <div class="lg:hidden flex items-center gap-2">
-                <a href="../about.html" class="inline-flex items-center px-2.5 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-xs font-semibold transition-colors" lang="zh-TW">
-                    中文
-                </a>
-                <a href="../en/about.html" class="inline-flex items-center px-2.5 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-xs font-semibold transition-colors" lang="en">
-                    EN
-                </a>
-                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="ナビゲーションメニューを開く">
+                <a href="../about.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="zh-TW" aria-label="繁体字中国語版">中</a>
+                <a href="../en/about.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="en" aria-label="English version">EN</a>
+                <button id="mobile-menu-btn" class="text-slate-600 hover:text-teal-700 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="メニューを開く">
                     <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
                 </button>
             </div>
         </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-lg z-40">
-            <div class="px-5 py-6 flex flex-col space-y-5">
-                <a href="index.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> ホーム</a>
-                <a href="features.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-star w-6 text-slate-400"></i> 機能</a>
-                <a href="about.html" class="text-indigo-600 font-bold flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> 開発者について</a>
-                <a href="privacy.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> プライバシー</a>
-                <hr class="border-slate-100">
-                <a href="index.html#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md w-full flex justify-center items-center">
-                    <i class="fa-brands fa-apple mr-2 text-xl"></i> ダウンロード情報を見る
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 w-full bg-white/95 product-glass border-b border-slate-200 shadow-lg z-40">
+            <div class="px-5 py-6 flex flex-col gap-5">
+                <a href="index.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> ホーム</a>
+                <a href="features.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-chart-line w-6 text-slate-400"></i> 機能</a>
+                <a href="about.html" class="text-teal-700 font-bold flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> 開発者について</a>
+                <a href="privacy.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> プライバシー</a>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-slate-900 hover:bg-teal-700 text-white px-5 py-3 rounded-lg font-bold transition-colors w-full flex justify-center items-center">
+                    <i class="fa-brands fa-apple mr-2 text-xl"></i> App Storeで見る
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow pb-20">
-        <div class="h-64 md:h-80 w-full bg-gradient-to-r from-slate-900 via-indigo-900 to-blue-900 relative overflow-hidden">
-            <div class="absolute inset-0 opacity-20">
-                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-                </svg>
-            </div>
-            <div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
-        </div>
-
-        <div class="max-w-4xl mx-auto px-5 relative -mt-32">
-            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
-                <div class="flex flex-col md:flex-row items-center md:items-end md:space-x-8 mb-10 text-center md:text-left border-b border-slate-100 pb-10">
-                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-indigo-200 via-blue-100 to-indigo-50 border-4 border-white shadow-xl flex items-center justify-center shrink-0 mb-4 md:mb-0 relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-indigo-400 opacity-20 group-hover:animate-ping rounded-full"></div>
-                        <i class="fa-solid fa-user-astronaut text-5xl text-indigo-500 group-hover:scale-110 group-hover:text-indigo-600 transition-all duration-300 relative z-10"></i>
-                    </div>
-
-                    <div class="flex-grow">
-                        <div class="inline-flex items-center px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold tracking-wider mb-3">
-                            <i class="fa-solid fa-compass mr-1.5"></i> 個人開発者
-                        </div>
-                        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight mb-2">Huang Chi Wei</h1>
-                        <p class="text-slate-500 font-medium text-lg mb-4">テクノロジー、旅、役に立つデジタルツールに関心を持っています。</p>
-
-                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                            <a href="mailto:nicktim1113@icloud.com" class="inline-flex items-center justify-center px-4 py-2 bg-slate-50 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600 rounded-lg text-sm font-medium transition-colors border border-slate-200">
-                                <i class="fa-solid fa-envelope mr-2"></i> メールで問い合わせる
-                            </a>
-                            <a href="features.html" class="inline-flex items-center justify-center px-4 py-2 bg-slate-50 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600 rounded-lg text-sm font-medium transition-colors border border-slate-200">
-                                <i class="fa-solid fa-layer-group mr-2"></i> 機能を見る
-                            </a>
-                        </div>
+    <main class="flex-grow">
+        <section class="hero-surface border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-5 py-16 md:py-20 grid lg:grid-cols-[0.75fr_1.25fr] gap-10 items-center">
+                <div class="bg-white border border-slate-200 rounded-lg p-6">
+                    <img src="../assets/images/app-logo.png" alt="MyFinance Go App icon" class="w-24 h-24 rounded-lg mb-5">
+                    <p class="text-sm font-bold text-teal-700 mb-2">Developer</p>
+                    <h1 class="text-3xl font-extrabold text-slate-950 mb-2">Huang Chi Wei</h1>
+                    <p class="text-slate-600 mb-5">AI、クラウド同期、iOSらしい操作感を日常の家計管理に取り入れることを目指す個人開発者です。</p>
+                    <div class="flex flex-col gap-3">
+                        <a href="mailto:nicktim1113@icloud.com?subject=MyFinance%20Go%20support" class="inline-flex items-center justify-center px-4 py-3 rounded-lg border border-slate-200 hover:bg-teal-50 hover:border-teal-200 font-semibold text-slate-700">
+                            <i class="fa-solid fa-envelope mr-2"></i> サポートへ問い合わせ
+                        </a>
+                        <a href="https://github.com/nicktim1113/MyFinance-Official" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center px-4 py-3 rounded-lg border border-slate-200 hover:bg-slate-100 font-semibold text-slate-700">
+                            <i class="fa-brands fa-github mr-2"></i> 公式サイトRepo
+                        </a>
                     </div>
                 </div>
-
-                <div class="space-y-12">
-                    <section>
-                        <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
-                            <i class="fa-solid fa-book-open-reader text-indigo-500 mr-3"></i> 開発者について
-                        </h2>
-                        <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
-                            <p>MyFinanceAppを開発しているHuang Chi Weiです。科学や新しい技術に触れること、そしてそれを日常の不便を減らす道具として形にすることに関心があります。</p>
-                            <p>旅行もその延長にあり、知らない場所で過ごす時間を、できるだけ身軽で快適なものにしたいと考えています。お金の記録も、その体験を邪魔しない自然なものであるべきだと思っています。</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
-                            <i class="fa-solid fa-lightbulb text-amber-500 mr-3"></i> MyFinanceAppを作った理由
-                        </h2>
-                        <div class="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100">
-                            <p class="text-slate-700 leading-relaxed italic mb-4">
-                                旅先でコーヒーを楽しんでいるときや、忙しい日常の途中で、複雑な入力フォームに時間を取られたくない。
-                            </p>
-                            <p class="text-slate-600 leading-relaxed">
-                                MyFinanceAppは、記録のしやすさと管理のしやすさを両立するために作りました。AI入力補助、クラウド同期、複数帳簿、読みやすいレポートを組み合わせ、落ち着いて使える家計管理ツールを目指しています。
-                            </p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
-                            <i class="fa-solid fa-list-check text-emerald-500 mr-3"></i> プロダクトの考え方
-                        </h2>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
-                                <h3 class="font-bold text-slate-800 mb-2">すばやく記録できる</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">忙しい日常や旅行中でも、入力が重くならないことを大切にしています。</p>
-                            </div>
-                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
-                                <h3 class="font-bold text-slate-800 mb-2">安心して使える</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">家計の記録には、わかりやすい構造、見やすいレポート、プライバシーへの配慮が必要です。</p>
-                            </div>
-                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
-                                <h3 class="font-bold text-slate-800 mb-2">使い方に合わせて育てられる</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">複数帳簿やカテゴリを使い、目的に合わせて管理の形を変えられます。</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h2 class="text-2xl font-bold text-slate-800 mb-5 flex items-center">
-                            <i class="fa-solid fa-wand-magic-sparkles text-purple-500 mr-3"></i> アプリを支える技術
-                        </h2>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
-                                <i class="fa-brands fa-swift text-4xl text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">iOSアプリ</h3>
-                                <p class="text-xs text-slate-500 mt-1">SwiftUI</p>
-                            </div>
-                            <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
-                                <i class="fa-solid fa-cloud text-4xl text-amber-400 mb-2 group-hover:-translate-y-1 transition-transform"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">クラウド同期</h3>
-                                <p class="text-xs text-slate-500 mt-1">Firebase</p>
-                            </div>
-                            <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
-                                <i class="fa-solid fa-brain text-4xl text-purple-400 mb-2 group-hover:scale-110 transition-transform"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">AI入力補助</h3>
-                                <p class="text-xs text-slate-500 mt-1">Generative AI</p>
-                            </div>
-                            <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 hover:border-indigo-200 transition-colors group">
-                                <i class="fa-solid fa-earth-americas text-4xl text-green-500 mb-2 group-hover:rotate-90 transition-transform duration-700"></i>
-                                <h3 class="font-bold text-slate-700 text-sm">旅先でも使いやすい設計</h3>
-                                <p class="text-xs text-slate-500 mt-1">UX / UI Design</p>
-                            </div>
-                        </div>
-                    </section>
+                <div>
+                    <p class="text-sm font-bold text-teal-700 mb-4">MyFinance Goについて</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 leading-tight mb-5">
+                        見た目だけの表ではなく、実生活で使える財務ツールを。
+                    </h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        MyFinance Goの出発点はとてもシンプルです。記録はすばやく、でもデータの主導権は利用者にあるべき。AIは便利ですが、保存前には自分で確認できるべき。レポートは読みやすく、予算や資産、日々の判断につながるべきだと考えています。
+                    </p>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-5 py-16">
+            <div class="grid lg:grid-cols-3 gap-5">
+                <article class="bg-white border border-slate-200 rounded-lg p-6">
+                    <i class="fa-solid fa-pen-nib text-teal-600 text-2xl mb-5"></i>
+                    <h2 class="text-xl font-bold text-slate-950 mb-3">派手さより、分かりやすさ</h2>
+                    <p class="text-slate-600 leading-relaxed">家計管理アプリは毎日使うものだからこそ、安定していて、予測しやすく、すばやく内容を確認できることを重視しています。</p>
+                </article>
+                <article class="bg-white border border-slate-200 rounded-lg p-6">
+                    <i class="fa-solid fa-user-check text-blue-600 text-2xl mb-5"></i>
+                    <h2 class="text-xl font-bold text-slate-950 mb-3">AIはあくまで補助</h2>
+                    <p class="text-slate-600 leading-relaxed">AIは自然な文章を下書きに変換できますが、最終判断を勝手に行うべきではありません。確認と修正の流れを残しています。</p>
+                </article>
+                <article class="bg-white border border-slate-200 rounded-lg p-6">
+                    <i class="fa-solid fa-shield-halved text-amber-600 text-2xl mb-5"></i>
+                    <h2 class="text-xl font-bold text-slate-950 mb-3">データの扱いを明確に</h2>
+                    <p class="text-slate-600 leading-relaxed">ログイン、同期、AI解析、購入、アカウント削除には信頼が必要です。そのため、アプリ内とWebサイトの両方に説明とサポート導線を用意しています。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bg-white border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-5 py-16 grid lg:grid-cols-[0.85fr_1.15fr] gap-10">
+                <div>
+                    <p class="text-sm font-bold text-teal-700 mb-3">技術基盤</p>
+                    <h2 class="text-3xl font-extrabold text-slate-950 mb-4">日常の家計管理を、iOSらしい使い心地で。</h2>
+                    <p class="text-slate-600 leading-relaxed">MyFinance Goは、SwiftUIで画面を構築し、SwiftDataでローカル記録を扱い、FirebaseとStoreKitを組み合わせて同期、AI機能、メンバーシップ、購入権利を支えています。</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <h3 class="font-bold text-slate-900 mb-2">SwiftUI + SwiftData</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">記録、レポート、設定、財務管理をiOSらしい操作感で扱えます。</p>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <h3 class="font-bold text-slate-900 mb-2">Firebase Sync</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">ログイン、クラウド同期、共有帳簿、Functions、App Checkを支えます。</p>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <h3 class="font-bold text-slate-900 mb-2">AI Assistance</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">取引テキスト解析やレポート要約に使い、保存前の確認を前提にしています。</p>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <h3 class="font-bold text-slate-900 mb-2">StoreKit 2</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">サブスクリプションと買い切り型モジュールはApple App Storeの仕組みで処理されます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-5 py-16">
+            <div class="bg-slate-900 rounded-lg p-8 md:p-10 grid md:grid-cols-[1fr_auto] gap-6 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white mb-3">MyFinance Goを試してみませんか？</h2>
+                    <p class="text-slate-300 leading-relaxed">App Storeで公開中のバージョンをダウンロードできます。データの取り扱いやサポートについては、プライバシーページをご確認ください。</p>
+                </div>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-white text-slate-950 hover:bg-teal-50 px-6 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center">
+                    <i class="fa-brands fa-apple mr-2 text-xl"></i> App Store
+                </a>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 md:py-16 mt-auto">
+    <footer class="bg-white border-t border-slate-200 text-slate-500 py-12 mt-auto">
         <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
             <div>
-                <div class="flex items-center space-x-2 mb-4 text-white">
-                    <i class="fa-solid fa-wallet"></i>
-                    <span class="font-bold text-lg">MyFinanceApp</span>
+                <div class="flex items-center gap-2 mb-4 text-slate-900">
+                    <img src="../assets/images/app-logo.png" alt="" class="w-8 h-8 rounded-lg">
+                    <span class="font-bold text-lg">MyFinance Go</span>
                 </div>
-                <p>日常でも旅先でも、お金の記録をわかりやすく保つための個人向け家計管理ツールです。</p>
+                <p>AI入力補助、見やすいレポート、複数帳簿の同期で、日常のお金を整理します。</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">クイックリンク</h4>
+                <h4 class="text-slate-900 font-bold mb-4">サイト内リンク</h4>
                 <ul class="space-y-2">
-                    <li><a href="index.html" class="hover:text-white transition-colors">ホーム</a></li>
-                    <li><a href="features.html" class="hover:text-white transition-colors">機能</a></li>
-                    <li><a href="about.html" class="hover:text-white transition-colors text-indigo-400">開発者について</a></li>
+                    <li><a href="index.html" class="hover:text-teal-700 transition-colors">ホーム</a></li>
+                    <li><a href="features.html" class="hover:text-teal-700 transition-colors">機能</a></li>
+                    <li><a href="about.html" class="hover:text-teal-700 transition-colors">開発者について</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">法的情報・サポート</h4>
+                <h4 class="text-slate-900 font-bold mb-4">ダウンロードとサポート</h4>
                 <ul class="space-y-2">
-                    <li><a href="privacy.html" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
-                    <li><a href="mailto:nicktim1113@icloud.com" class="hover:text-white transition-colors">お問い合わせ</a></li>
-                    <li><a href="../en/about.html" class="hover:text-white transition-colors" lang="en">English</a></li>
-                    <li><a href="../about.html" class="hover:text-white transition-colors" lang="zh-TW">繁體中文</a></li>
+                    <li><a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="hover:text-teal-700 transition-colors">App Store</a></li>
+                    <li><a href="privacy.html" class="hover:text-teal-700 transition-colors">プライバシーポリシー</a></li>
+                    <li><a href="mailto:nicktim1113@icloud.com?subject=MyFinance%20Go%20support" class="hover:text-teal-700 transition-colors">サポートへ問い合わせ</a></li>
+                    <li><a href="../about.html" class="hover:text-teal-700 transition-colors" lang="zh-TW">繁體中文</a> · <a href="../en/about.html" class="hover:text-teal-700 transition-colors" lang="en">English</a></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-800 text-center text-xs">
-            <p>&copy; 2026 MyFinanceApp. All rights reserved.</p>
+        <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-200 text-center text-xs">
+            <p>© 2026 MyFinance Go. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
