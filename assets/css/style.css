@@ -1,27 +1,65 @@
-/* style.css - 專案共用樣式表 */
+/* MyFinance Go website shared styles */
 
-/* 平滑浮動動畫設定 */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+:root {
+    color-scheme: light;
 }
 
-.animate-float {
-    animation: float 6s ease-in-out infinite;
+html {
+    scroll-behavior: smooth;
 }
 
-/* 隱藏原生滾動條 */
+body {
+    text-rendering: optimizeLegibility;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #0f766e;
+    outline-offset: 3px;
+}
+
+.app-logo-mark {
+    box-shadow: 0 10px 24px rgba(15, 118, 110, 0.18);
+}
+
+.hero-surface {
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        #f8fafc;
+    background-size: 32px 32px;
+}
+
+.product-glass {
+    backdrop-filter: blur(18px);
+}
+
+.metric-line {
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-line::after {
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.18), transparent);
+    content: "";
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    animation: metric-scan 6s ease-in-out infinite;
+}
+
+@keyframes metric-scan {
+    0%, 55% { left: -100%; }
+    75%, 100% { left: 100%; }
+}
+
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
 .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
-
-/* 增強按鈕與連結的鍵盤無障礙焦點輪廓 */
-button:focus-visible, a:focus-visible {
-    outline: 2px solid #4f46e5;
-    outline-offset: 2px;
 }
