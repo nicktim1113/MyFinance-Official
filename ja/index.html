@@ -12,13 +12,98 @@
     <link rel="alternate" hreflang="en" href="https://nicktim1113.github.io/MyFinance-Official/en/">
     <link rel="alternate" hreflang="x-default" href="https://nicktim1113.github.io/MyFinance-Official/">
     <link rel="icon" type="image/png" href="../assets/images/app-logo.png">
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <meta property="og:title" content="MyFinance - AI入力補助つき家計管理アプリ">
     <meta property="og:description" content="支出をすばやく記録し、AIによる取引下書きを確認しながら、複数帳簿・同期・レポートでお金の流れを整理できます。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/ja/">
-    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/app-logo.png">
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MyFinance - AI入力補助つき家計管理アプリ">
+    <meta name="twitter:description" content="MyFinanceは、App Storeで公開中の個人向け家計管理アプリです。すばやい記録、AIによる取引下書き、複数帳簿、クラウド同期、レポート、予算、資産管理に対応します。">
+    <meta name="twitter:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "MyFinance",
+        "description": "すばやい記録、確認できるAI下書き、帳簿、レポート、予算、資産管理に対応したiOS向け家計管理アプリです。",
+        "operatingSystem": "iOS",
+        "applicationCategory": "FinanceApplication",
+        "url": "https://nicktim1113.github.io/MyFinance-Official/ja/",
+        "downloadUrl": "https://apps.apple.com/us/app/myfinance-go/id6760079032",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "AIが取引を自動保存しますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ。AIは取引の下書きを作成するための補助機能です。保存前に金額、日付、カテゴリ、メモを確認・修正できます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "投資・税務・法律・財務の助言を受けられますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ。本アプリは個人の家計記録を支援するツールであり、投資助言、税務・法律・財務アドバイスは提供しません。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "支払いとサブスクリプションは誰が処理しますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "サブスクリプション、アプリ内課金、購入の復元、返金手続きは、Apple App Store / StoreKitの規則に従って処理されます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "アカウントやデータを削除できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。アプリ内の手順に沿ってアカウントと関連データを削除できます。必要に応じてサポートにもお問い合わせいただけます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "財務データを販売したり、広告追跡に利用したりしますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "いいえ。MyFinanceは個人の財務記録を販売しません。データの利用目的はプライバシーポリシーで明記しています。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "英語ページでMyFinance Goと表記している理由は？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "英語圏およびApp Store上の名称重複を避けるため、英語の掲載名にはMyFinance Goを使用しています。中国語・日本語ではMyFinanceとして表記しています。"
+            }
+          }
+        ]
+      }
+    ]
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
@@ -44,7 +129,7 @@
             <div class="lg:hidden flex items-center gap-2">
                 <a href="../index.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="zh-TW" aria-label="繁体字中国語版">中</a>
                 <a href="../en/index.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="en" aria-label="English version">EN</a>
-                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="メニューを開く">
+                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
                     <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
                 </button>
             </div>
@@ -175,6 +260,78 @@
                         <span class="text-sm font-bold text-indigo-600">04</span>
                         <h3 class="font-bold text-slate-900 mt-3 mb-2">行動</h3>
                         <p class="text-sm text-slate-600 leading-relaxed">予算を見直し、資産を確認し、共有支出をそろえます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans and FAQ -->
+        <section id="plans" class="bg-white border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-5 py-16">
+                <div class="max-w-2xl mb-10">
+                    <p class="text-sm font-bold text-indigo-600 mb-3">プランとよくある質問</p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mb-4">まずは無料で始め、必要な時だけ追加できます</h2>
+                    <p class="text-slate-600 leading-relaxed">MyFinanceは、記録しやすく、あとから理解しやすい体験を大切にしています。追加機能はアプリ内で内容を確認でき、購入と復元はAppleの仕組みで処理されます。</p>
+                </div>
+                <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8">
+                    <div class="space-y-4">
+                        <article class="border border-slate-200 rounded-lg p-5 bg-slate-50">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-seedling"></i></div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 mb-2">無料で開始</h3>
+                                    <p class="text-sm text-slate-600 leading-relaxed">日々の収支記録、カテゴリ、帳簿、基本的なレポートから、無理なく記録の習慣を作れます。</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="border border-slate-200 rounded-lg p-5 bg-slate-50">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 mb-2">必要に応じてアップグレード</h3>
+                                    <p class="text-sm text-slate-600 leading-relaxed">AI、同期、共有帳簿、詳細分析などが必要になった時に、アプリ内の案内に沿って選択できます。</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="border border-slate-200 rounded-lg p-5 bg-slate-50">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0"><i class="fa-solid fa-box-open"></i></div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900 mb-2">買い切りモジュール</h3>
+                                    <p class="text-sm text-slate-600 leading-relaxed">特定機能だけを追加したい場合は、非消耗型のアプリ内課金として利用できます。購入と復元はAppleが処理します。</p>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                            <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center shadow-md shadow-indigo-200/60"><i class="fa-brands fa-apple mr-2 text-xl"></i> App Storeで見る</a>
+                            <a href="privacy.html" class="bg-white border border-slate-200 hover:border-indigo-200 hover:bg-indigo-50 text-slate-700 px-5 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center"><i class="fa-solid fa-shield-halved mr-2"></i> プライバシーを見る</a>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <details class="group border border-slate-200 rounded-lg bg-white p-5" open>
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">AIが取引を自動保存しますか？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
+                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">いいえ。AIは取引の下書きを作成するための補助機能です。保存前に金額、日付、カテゴリ、メモを確認・修正できます。</p>
+                        </details>
+                        <details class="group border border-slate-200 rounded-lg bg-white p-5">
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">投資・税務・法律・財務の助言を受けられますか？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
+                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">いいえ。本アプリは個人の家計記録を支援するツールであり、投資助言、税務・法律・財務アドバイスは提供しません。</p>
+                        </details>
+                        <details class="group border border-slate-200 rounded-lg bg-white p-5">
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">支払いとサブスクリプションは誰が処理しますか？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
+                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">サブスクリプション、アプリ内課金、購入の復元、返金手続きは、Apple App Store / StoreKitの規則に従って処理されます。</p>
+                        </details>
+                        <details class="group border border-slate-200 rounded-lg bg-white p-5">
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">アカウントやデータを削除できますか？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
+                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">はい。アプリ内の手順に沿ってアカウントと関連データを削除できます。必要に応じてサポートにもお問い合わせいただけます。</p>
+                        </details>
+                        <details class="group border border-slate-200 rounded-lg bg-white p-5">
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">財務データを販売したり、広告追跡に利用したりしますか？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
+                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">いいえ。MyFinanceは個人の財務記録を販売しません。データの利用目的はプライバシーポリシーで明記しています。</p>
+                        </details>
+                        <details class="group border border-slate-200 rounded-lg bg-white p-5">
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">英語ページでMyFinance Goと表記している理由は？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
+                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">英語圏およびApp Store上の名称重複を避けるため、英語の掲載名にはMyFinance Goを使用しています。中国語・日本語ではMyFinanceとして表記しています。</p>
+                        </details>
                     </div>
                 </div>
             </div>

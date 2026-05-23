@@ -16,12 +16,23 @@
     <meta property="og:description" content="MyFinanceにおけるアカウント情報、家計簿データ、クラウド同期、AI入力補助、購入、アカウント削除の取り扱いについて説明します。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/ja/privacy.html">
-    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/app-logo.png">
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="利用規約・プライバシーポリシー - MyFinance">
+    <meta name="twitter:description" content="MyFinanceの利用規約およびプライバシーポリシーをご確認いただけます。データの取得、クラウド同期、AI入力補助、アカウント削除、StoreKit購入、問い合わせ方法について説明します。">
+    <meta name="twitter:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
     <link rel="icon" type="image/png" href="../assets/images/app-logo.png">
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer">
 
     <style>
         .custom-scrollbar::-webkit-scrollbar {
@@ -61,7 +72,7 @@
         <div class="flex items-center gap-2">
             <a href="../privacy.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:text-indigo-600 hover:bg-indigo-50" lang="zh-TW">中文</a>
             <a href="../en/privacy.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:text-indigo-600 hover:bg-indigo-50" lang="en">EN</a>
-            <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" aria-label="ナビゲーションメニューを開く">
+            <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" aria-label="ナビゲーションメニューを開く" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
             </button>
         </div>
@@ -96,7 +107,7 @@
     </div>
 
     <div class="lg:hidden fixed bottom-5 right-5 z-30">
-        <button id="section-menu-btn" class="inline-flex max-w-[calc(100vw-2.5rem)] items-center gap-2 rounded-full bg-indigo-600 px-4 py-3 text-sm font-bold text-white shadow-xl shadow-indigo-600/20 hover:bg-indigo-700 transition-colors" aria-label="目次を開く">
+        <button id="section-menu-btn" class="inline-flex max-w-[calc(100vw-2.5rem)] items-center gap-2 rounded-full bg-indigo-600 px-4 py-3 text-sm font-bold text-white shadow-xl shadow-indigo-600/20 hover:bg-indigo-700 transition-colors" aria-label="目次を開く" aria-expanded="false" aria-controls="mobile-section-menu">
             <i class="fa-solid fa-list"></i>
             <span>目次</span>
             <span class="max-w-[7rem] truncate text-slate-300" id="section-menu-current">サービス</span>
@@ -144,6 +155,30 @@
                     <span class="bg-amber-50 text-amber-800 px-2 py-1 rounded font-medium text-sm">本ポリシーに同意されない場合は、本アプリの利用を中止し、端末から削除してください。</span>
                 </p>
             </div>
+
+            <!-- Policy Summary -->
+            <section id="privacy-summary" class="mb-16 grid md:grid-cols-2 xl:grid-cols-4 gap-4" aria-label="プライバシー概要">
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-solid fa-lock text-indigo-600 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">財務データを販売しません</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">取引や家計の記録はアプリ機能の提供に利用し、個人の財務データとして販売しません。</p>
+                </article>
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-solid fa-wand-magic-sparkles text-blue-600 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">AIは下書きのみ作成</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">AI入力補助は保存前に確認できる下書きを作成し、自動で確定保存しません。</p>
+                </article>
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-brands fa-apple text-slate-800 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">支払いはAppleが処理</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">サブスクリプション、アプリ内課金、購入の復元、返金はApp Store / StoreKitの規則に従います。</p>
+                </article>
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-solid fa-user-slash text-rose-600 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">アカウント削除に対応</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">アプリ内でアカウントと関連データを削除できます。必要に応じてサポートへ連絡できます。</p>
+                </article>
+            </section>
 
             <div class="space-y-16">
                 <section id="section-1" class="scroll-mt-24 group policy-section">
@@ -593,28 +628,53 @@
         const sectionMenuCloseBtn = document.getElementById('section-menu-close-btn');
         const mobileSectionMenu = document.getElementById('mobile-section-menu');
 
+        function setScrollLock() {
+            const hasOpenOverlay = !mobileMenu.classList.contains('hidden') || !mobileSectionMenu.classList.contains('hidden');
+            document.body.classList.toggle('is-menu-open', hasOpenOverlay);
+        }
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            mobileMenuBtn.setAttribute('aria-expanded', String(open));
+            menuIcon.classList.toggle('fa-bars', !open);
+            menuIcon.classList.toggle('fa-xmark', open);
+            setScrollLock();
+        }
+
+        function setSectionMenu(open) {
+            mobileSectionMenu.classList.toggle('hidden', !open);
+            sectionMenuBtn.setAttribute('aria-expanded', String(open));
+            setScrollLock();
+        }
+
         function toggleMobileMenu() {
-            if (!mobileSectionMenu.classList.contains('hidden')) {
-                toggleSectionMenu();
+            const shouldOpen = mobileMenu.classList.contains('hidden');
+            if (shouldOpen) {
+                setSectionMenu(false);
             }
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.classList.replace('fa-xmark', 'fa-bars');
-            } else {
-                menuIcon.classList.replace('fa-bars', 'fa-xmark');
-            }
+            setMobileMenu(shouldOpen);
         }
 
         function toggleSectionMenu() {
-            if (!mobileMenu.classList.contains('hidden')) {
-                toggleMobileMenu();
+            const shouldOpen = mobileSectionMenu.classList.contains('hidden');
+            if (shouldOpen) {
+                setMobileMenu(false);
             }
-            mobileSectionMenu.classList.toggle('hidden');
+            setSectionMenu(shouldOpen);
         }
 
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
         sectionMenuBtn.addEventListener('click', toggleSectionMenu);
-        sectionMenuCloseBtn.addEventListener('click', toggleSectionMenu);
+        sectionMenuCloseBtn.addEventListener('click', () => setSectionMenu(false));
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setMobileMenu(false));
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                setMobileMenu(false);
+                setSectionMenu(false);
+            }
+        });
     </script>
 </body>
 </html>

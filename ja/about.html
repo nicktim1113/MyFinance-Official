@@ -12,13 +12,24 @@
     <link rel="alternate" hreflang="en" href="https://nicktim1113.github.io/MyFinance-Official/en/about.html">
     <link rel="alternate" hreflang="x-default" href="https://nicktim1113.github.io/MyFinance-Official/about.html">
     <link rel="icon" type="image/png" href="../assets/images/app-logo.png">
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <meta property="og:title" content="開発者について - MyFinance">
     <meta property="og:description" content="MyFinanceの考え方。すばやい記録、確認できるAI、見やすいレポート、プライバシーに配慮した家計管理。">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/ja/about.html">
-    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/app-logo.png">
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="開発者について - MyFinance">
+    <meta name="twitter:description" content="MyFinanceの開発背景をご紹介します。Huang Chi Weiが、分かりやすい操作、利用者による確認、AI入力補助、プライバシーに配慮した同期、iOSらしい使いやすさを重視して作った家計管理アプリです。">
+    <meta name="twitter:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
@@ -44,7 +55,7 @@
             <div class="lg:hidden flex items-center gap-2">
                 <a href="../about.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="zh-TW" aria-label="繁体字中国語版">中</a>
                 <a href="../en/about.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="en" aria-label="English version">EN</a>
-                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="メニューを開く">
+                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
                     <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
                 </button>
             </div>

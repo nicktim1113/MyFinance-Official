@@ -17,17 +17,28 @@
     <meta property="og:description" content="了解 MyFinance 如何處理帳號、財務紀錄、雲端同步、AI 解析、購買與帳號刪除。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/privacy.html">
-    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/app-logo.png">
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MyFinance - 使用者條款與隱私權政策">
+    <meta name="twitter:description" content="了解 MyFinance 的使用者條款與隱私權政策，包含資料收集、雲端同步、AI 解析、帳號刪除、StoreKit 購買與聯絡方式。">
+    <meta name="twitter:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-card.png">
     <link rel="icon" type="image/png" href="assets/images/app-logo.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- 召喚 Tailwind CSS 雲端裁縫師 -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 召喚 FontAwesome 符文畫師 (圖示) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer">
     
     <style>
-        /* 隱藏滾動條的魔法 */
+        /* Custom scrollbar */
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
         }
@@ -39,7 +50,7 @@
             border-radius: 20px;
         }
         
-        /* 選單高亮的過渡動畫 */
+        /* Active menu transition */
         .nav-item {
             transition: all 0.2s ease-in-out;
         }
@@ -70,7 +81,7 @@
         <div class="flex items-center gap-2">
             <a href="en/privacy.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:text-indigo-600 hover:bg-indigo-50" lang="en" aria-label="English version">EN</a>
             <a href="ja/privacy.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:text-indigo-600 hover:bg-indigo-50" lang="ja" aria-label="日本語版">日</a>
-            <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" aria-label="開啟網站選單">
+            <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" aria-label="開啟網站選單" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
             </button>
         </div>
@@ -107,7 +118,7 @@
     </div>
 
     <div class="lg:hidden fixed bottom-5 right-5 z-30">
-        <button id="section-menu-btn" class="inline-flex max-w-[calc(100vw-2.5rem)] items-center gap-2 rounded-full bg-indigo-600 px-4 py-3 text-sm font-bold text-white shadow-xl shadow-indigo-600/20 hover:bg-indigo-700 transition-colors" aria-label="開啟本頁目錄">
+        <button id="section-menu-btn" class="inline-flex max-w-[calc(100vw-2.5rem)] items-center gap-2 rounded-full bg-indigo-600 px-4 py-3 text-sm font-bold text-white shadow-xl shadow-indigo-600/20 hover:bg-indigo-700 transition-colors" aria-label="開啟本頁目錄" aria-expanded="false" aria-controls="mobile-section-menu">
             <i class="fa-solid fa-list"></i>
             <span>目錄</span>
             <span class="max-w-[7rem] truncate text-slate-300" id="section-menu-current">服務說明</span>
@@ -166,6 +177,30 @@
             </div>
 
             <!-- 政策內容區域 -->
+            <!-- Policy Summary -->
+            <section id="privacy-summary" class="mb-16 grid md:grid-cols-2 xl:grid-cols-4 gap-4" aria-label="隱私摘要">
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-solid fa-lock text-indigo-600 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">不出售財務資料</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">你的交易與財務紀錄只用於提供 App 功能，不作為出售用途。</p>
+                </article>
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-solid fa-wand-magic-sparkles text-blue-600 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">AI 只產生草稿</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">AI 交易解析需要你在保存前確認，避免自動寫入錯誤資料。</p>
+                </article>
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-brands fa-apple text-slate-800 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">付款由 Apple 處理</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">訂閱、內購、恢復購買與退款流程依 App Store / StoreKit 規則辦理。</p>
+                </article>
+                <article class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                    <i class="fa-solid fa-user-slash text-rose-600 text-xl mb-4"></i>
+                    <h2 class="text-base font-bold text-slate-900 mb-2">支援帳號刪除</h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">你可以透過 App 內流程刪除帳號與相關資料，或聯繫支援協助。</p>
+                </article>
+            </section>
+
             <div class="space-y-16">
                 
                 <!-- Section 1 -->
@@ -548,7 +583,7 @@
         </main>
     </div>
 
-    <!-- 啟動魔法機關的 JavaScript -->
+    <!-- Page navigation script -->
     <script>
         // 定義章節資料 (用於生成左側導航菜單)
         const sections = [
@@ -600,7 +635,7 @@
         // 初始化第一個標籤為 active
         updateActiveNav('section-1');
 
-        // 2. 處理滾動與高亮邏輯
+        // 2. 處理滾動與目錄狀態
         function updateActiveNav(activeId) {
             // 更新桌面版
             document.querySelectorAll('.nav-item').forEach(btn => {
@@ -674,28 +709,53 @@
         const sectionMenuCloseBtn = document.getElementById('section-menu-close-btn');
         const mobileSectionMenu = document.getElementById('mobile-section-menu');
 
+        function setScrollLock() {
+            const hasOpenOverlay = !mobileMenu.classList.contains('hidden') || !mobileSectionMenu.classList.contains('hidden');
+            document.body.classList.toggle('is-menu-open', hasOpenOverlay);
+        }
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            mobileMenuBtn.setAttribute('aria-expanded', String(open));
+            menuIcon.classList.toggle('fa-bars', !open);
+            menuIcon.classList.toggle('fa-xmark', open);
+            setScrollLock();
+        }
+
+        function setSectionMenu(open) {
+            mobileSectionMenu.classList.toggle('hidden', !open);
+            sectionMenuBtn.setAttribute('aria-expanded', String(open));
+            setScrollLock();
+        }
+
         function toggleMobileMenu() {
-            if (!mobileSectionMenu.classList.contains('hidden')) {
-                toggleSectionMenu();
+            const shouldOpen = mobileMenu.classList.contains('hidden');
+            if (shouldOpen) {
+                setSectionMenu(false);
             }
-            mobileMenu.classList.toggle('hidden');
-            if(mobileMenu.classList.contains('hidden')) {
-                menuIcon.classList.replace('fa-xmark', 'fa-bars');
-            } else {
-                menuIcon.classList.replace('fa-bars', 'fa-xmark');
-            }
+            setMobileMenu(shouldOpen);
         }
 
         function toggleSectionMenu() {
-            if (!mobileMenu.classList.contains('hidden')) {
-                toggleMobileMenu();
+            const shouldOpen = mobileSectionMenu.classList.contains('hidden');
+            if (shouldOpen) {
+                setMobileMenu(false);
             }
-            mobileSectionMenu.classList.toggle('hidden');
+            setSectionMenu(shouldOpen);
         }
 
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
         sectionMenuBtn.addEventListener('click', toggleSectionMenu);
-        sectionMenuCloseBtn.addEventListener('click', toggleSectionMenu);
+        sectionMenuCloseBtn.addEventListener('click', () => setSectionMenu(false));
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setMobileMenu(false));
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                setMobileMenu(false);
+                setSectionMenu(false);
+            }
+        });
 
     </script>
 </body>
