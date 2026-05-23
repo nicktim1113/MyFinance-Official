@@ -14,19 +14,19 @@ body {
 
 button:focus-visible,
 a:focus-visible {
-    outline: 2px solid #0f766e;
+    outline: 2px solid #4f46e5;
     outline-offset: 3px;
 }
 
 .app-logo-mark {
-    box-shadow: 0 10px 24px rgba(15, 118, 110, 0.18);
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.18);
 }
 
 .hero-surface {
     background:
-        linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-        #f8fafc;
+        linear-gradient(rgba(79, 70, 229, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(79, 70, 229, 0.045) 1px, transparent 1px),
+        #f8faff;
     background-size: 32px 32px;
 }
 
@@ -40,7 +40,7 @@ a:focus-visible {
 }
 
 .metric-line::after {
-    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.18), transparent);
+    background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.18), transparent);
     content: "";
     height: 100%;
     left: -100%;
