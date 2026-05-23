@@ -3,187 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyFinanceApp - 你的個人財務魔法助理</title>
-    <meta name="description" content="MyFinanceApp 是專為旅人打造的智慧財務魔法助理，結合 AI 解析與雲端同步，讓記帳變得像呼吸一樣自然。">
-    <meta name="keywords" content="MyFinanceApp, 記帳, 財務管理, 旅行, AI, 自動記帳">
+    <title>MyFinance Go - AI 輔助記帳與個人財務管理</title>
+    <meta name="description" content="MyFinance Go 是已在 App Store 上架的個人財務管理 App，提供快速記帳、AI 交易草稿、多帳本、雲端同步、報表洞察、預算與資產管理。">
+    <meta name="keywords" content="MyFinance Go, 記帳 App, 個人財務管理, AI 記帳, 預算管理, 共享帳本, App Store">
     <link rel="canonical" href="https://nicktim1113.github.io/MyFinance-Official/">
     <link rel="alternate" hreflang="zh-Hant" href="https://nicktim1113.github.io/MyFinance-Official/">
     <link rel="alternate" hreflang="en" href="https://nicktim1113.github.io/MyFinance-Official/en/">
     <link rel="alternate" hreflang="ja" href="https://nicktim1113.github.io/MyFinance-Official/ja/">
     <link rel="alternate" hreflang="x-default" href="https://nicktim1113.github.io/MyFinance-Official/">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="MyFinanceApp - 你的個人財務魔法助理">
-    <meta property="og:description" content="專為旅人打造的智慧財務魔法助理，結合 AI 解析與雲端同步，讓記帳變得像呼吸一樣自然。">
+    <link rel="icon" type="image/png" href="assets/images/app-logo.png">
+    <meta property="og:title" content="MyFinance Go - AI 輔助記帳與個人財務管理">
+    <meta property="og:description" content="快速記帳、AI 交易草稿、多帳本、雲端同步、報表洞察與預算資產管理，都在 MyFinance Go。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nicktim1113.github.io/MyFinance-Official/">
-    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/og-image.jpg">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- 召喚 Tailwind CSS 雲端裁縫師 -->
+    <meta property="og:image" content="https://nicktim1113.github.io/MyFinance-Official/assets/images/app-logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 召喚 FontAwesome 符文畫師 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
-
-    <!-- 城堡的頂部導航走廊 (Navigation Bar) -->
-    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col selection:bg-teal-100 selection:text-teal-900">
+    <header class="bg-white/95 product-glass border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-5 h-16 flex justify-between items-center">
-            <!-- 網站標誌 (Logo) -->
-            <a href="index.html" class="flex items-center space-x-2 group">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform text-white">
-                    <i class="fa-solid fa-wallet"></i>
-                </div>
-                <span class="font-bold text-base sm:text-xl text-slate-800 tracking-wide">MyFinanceApp</span>
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="assets/images/app-logo.png" alt="MyFinance Go" class="w-9 h-9 rounded-lg app-logo-mark">
+                <span class="font-bold text-base sm:text-xl text-slate-900">MyFinance Go</span>
             </a>
-
-            <!-- 魔法傳送門 (導覽連結) -->
-            <nav class="hidden lg:flex space-x-8">
-                <!-- href 屬性就是通往其他房間的鑰匙 -->
-                <a href="index.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1">首頁</a>
-                <a href="features.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">功能特色</a>
-                <a href="about.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">關於開發者</a>
-                <a href="privacy.html" class="text-slate-500 hover:text-indigo-600 font-medium transition-colors">隱私權政策</a>
+            <nav class="hidden lg:flex items-center gap-7">
+                <a href="index.html" class="text-teal-700 font-semibold border-b-2 border-teal-600 pb-1">首頁</a>
+                <a href="features.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">功能特色</a>
+                <a href="about.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">關於開發者</a>
+                <a href="privacy.html" class="text-slate-500 hover:text-teal-700 font-medium transition-colors">隱私權政策</a>
             </nav>
-
-            <!-- 下載按鈕 -->
             <div class="hidden lg:flex items-center gap-3">
-                <a href="en/index.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="en">
-                    EN
-                </a>
-                <a href="ja/index.html" class="inline-flex items-center px-3 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-sm font-semibold transition-colors" lang="ja">
-                    日本語
-                </a>
-                <a href="#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg">
-                    免費下載
+                <a href="en/index.html" class="px-3 py-2 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-200 hover:bg-teal-50 text-sm font-semibold transition-colors" lang="en">EN</a>
+                <a href="ja/index.html" class="px-3 py-2 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:border-teal-200 hover:bg-teal-50 text-sm font-semibold transition-colors" lang="ja">日本語</a>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-slate-900 hover:bg-teal-700 text-white px-5 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
+                    <i class="fa-brands fa-apple mr-2"></i> App Store
                 </a>
             </div>
-            
-            <!-- 手機版魔法機關按鈕 (Mobile Menu Button) -->
             <div class="lg:hidden flex items-center gap-2">
-                <a href="en/index.html" class="inline-flex items-center px-2.5 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-xs font-semibold transition-colors" lang="en" aria-label="English version">
-                    EN
-                </a>
-                <a href="ja/index.html" class="inline-flex items-center px-2.5 py-2 rounded-full border border-slate-200 text-slate-600 hover:text-indigo-600 hover:border-indigo-200 hover:bg-indigo-50 text-xs font-semibold transition-colors" lang="ja" aria-label="日本語版">
-                    日
-                </a>
-                <button id="mobile-menu-btn" class="text-slate-600 hover:text-indigo-600 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors">
+                <a href="en/index.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="en" aria-label="English version">EN</a>
+                <a href="ja/index.html" class="px-2.5 py-2 rounded-lg border border-slate-200 text-slate-600 text-xs font-semibold" lang="ja" aria-label="日本語版">日</a>
+                <button id="mobile-menu-btn" class="text-slate-600 hover:text-teal-700 focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="開啟選單">
                     <i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i>
                 </button>
             </div>
         </div>
-
-        <!-- 手機版隱藏走廊 (Mobile Menu Dropdown) -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-lg z-40">
-            <div class="px-5 py-6 flex flex-col space-y-5">
-                <a href="index.html" class="text-indigo-600 font-bold flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> 首頁</a>
-                <a href="features.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-star w-6 text-slate-400"></i> 功能特色</a>
-                <a href="about.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> 關於開發者</a>
-                <a href="privacy.html" class="text-slate-600 hover:text-indigo-600 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> 隱私權政策</a>
-                <hr class="border-slate-100">
-                <a href="#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md w-full flex justify-center items-center">
-                    <i class="fa-brands fa-apple mr-2 text-xl"></i> 免費下載
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 w-full bg-white/95 product-glass border-b border-slate-200 shadow-lg z-40">
+            <div class="px-5 py-6 flex flex-col gap-5">
+                <a href="index.html" class="text-teal-700 font-bold flex items-center"><i class="fa-solid fa-house w-6 text-slate-400"></i> 首頁</a>
+                <a href="features.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-chart-line w-6 text-slate-400"></i> 功能特色</a>
+                <a href="about.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-user w-6 text-slate-400"></i> 關於開發者</a>
+                <a href="privacy.html" class="text-slate-600 hover:text-teal-700 font-medium flex items-center"><i class="fa-solid fa-shield-halved w-6 text-slate-400"></i> 隱私權政策</a>
+                <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-slate-900 hover:bg-teal-700 text-white px-5 py-3 rounded-lg font-bold transition-colors w-full flex justify-center items-center">
+                    <i class="fa-brands fa-apple mr-2 text-xl"></i> 前往 App Store
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 迎賓大廳主視覺 (Hero Section) -->
     <main class="flex-grow">
-        <div class="max-w-6xl mx-auto px-5 py-20 md:py-32 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 pr-0 md:pr-10 mb-10 md:mb-0">
-                <div class="inline-flex items-center px-3 py-1 bg-amber-50 text-amber-600 rounded-full text-xs font-bold tracking-wider mb-6 border border-amber-200">
-                    <i class="fa-solid fa-star mr-2"></i> 全新上線
+        <section class="hero-surface border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 grid lg:grid-cols-[1.02fr_0.98fr] gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-lg text-sm font-bold mb-6 border border-emerald-100">
+                        <i class="fa-solid fa-circle-check mr-2"></i> 已在 App Store 上架
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold text-slate-950 leading-tight mb-6">
+                        用更少時間記帳，<br>看懂每一天的錢流。
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
+                        MyFinance Go 把快速輸入、AI 交易草稿、多帳本、共享同步與報表洞察放在同一個清楚的流程裡。你負責確認生活發生了什麼，App 幫你把財務紀錄整理得有跡可循。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-slate-900 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center">
+                            <i class="fa-brands fa-apple mr-2 text-xl"></i> 在 App Store 下載
+                        </a>
+                        <a href="features.html" class="bg-white border border-slate-200 hover:border-teal-200 hover:bg-teal-50 text-slate-700 px-6 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center">
+                            <i class="fa-solid fa-layer-group mr-2"></i> 查看完整功能
+                        </a>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-                    掌握你的財富 <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">成就你的旅行夢想</span>
-                </h1>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                    結合最新 AI 科技，MyFinanceApp 讓你輕鬆記錄每一筆冒險花費。簡單、安全、聰明，是你探索世界時最可靠的財務背包。
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#download" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg shadow-indigo-200 flex items-center">
+                <div class="relative">
+                    <div class="bg-white border border-slate-200 rounded-lg shadow-xl overflow-hidden">
+                        <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/images/app-logo.png" alt="" class="w-12 h-12 rounded-lg">
+                                <div>
+                                    <p class="font-bold text-slate-900">今日總覽</p>
+                                    <p class="text-sm text-slate-500">個人帳本 · 已同步</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-lg bg-teal-50 text-teal-700 text-sm font-bold">AI Ready</span>
+                        </div>
+                        <div class="p-5 space-y-4">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="rounded-lg bg-slate-50 p-4 border border-slate-100">
+                                    <p class="text-sm text-slate-500">本月支出</p>
+                                    <p class="text-2xl font-extrabold text-slate-900">$28,640</p>
+                                </div>
+                                <div class="rounded-lg bg-emerald-50 p-4 border border-emerald-100">
+                                    <p class="text-sm text-emerald-700">預算剩餘</p>
+                                    <p class="text-2xl font-extrabold text-emerald-800">42%</p>
+                                </div>
+                            </div>
+                            <div class="rounded-lg border border-slate-100 p-4 metric-line">
+                                <p class="text-sm font-semibold text-slate-600 mb-3">AI 交易草稿</p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="font-bold text-slate-900">早餐、捷運、咖啡</p>
+                                        <p class="text-sm text-slate-500">3 筆待確認 · 已辨識分類</p>
+                                    </div>
+                                    <i class="fa-solid fa-wand-magic-sparkles text-amber-500 text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3 text-center">
+                                <div class="rounded-lg bg-blue-50 p-3 text-blue-700 font-bold text-sm">報表</div>
+                                <div class="rounded-lg bg-amber-50 p-3 text-amber-700 font-bold text-sm">資產</div>
+                                <div class="rounded-lg bg-rose-50 p-3 text-rose-700 font-bold text-sm">共享</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-5 py-16">
+            <div class="grid md:grid-cols-3 gap-5">
+                <article class="bg-white border border-slate-200 rounded-lg p-6">
+                    <i class="fa-solid fa-pen-to-square text-teal-600 text-2xl mb-5"></i>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3">快速記帳，但保留確認權</h2>
+                    <p class="text-slate-600 leading-relaxed">輸入一句話即可產生交易草稿，金額、日期、分類與備註都能先確認再儲存，速度和控制感不需要二選一。</p>
+                </article>
+                <article class="bg-white border border-slate-200 rounded-lg p-6">
+                    <i class="fa-solid fa-chart-column text-blue-600 text-2xl mb-5"></i>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3">報表與預算連在一起</h2>
+                    <p class="text-slate-600 leading-relaxed">從儀表板、趨勢圖、分類排行到預算與資產，讓每筆紀錄最後都能回到可行動的財務判斷。</p>
+                </article>
+                <article class="bg-white border border-slate-200 rounded-lg p-6">
+                    <i class="fa-solid fa-people-arrows text-amber-600 text-2xl mb-5"></i>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3">個人與共享帳本都能整理</h2>
+                    <p class="text-slate-600 leading-relaxed">日常、旅行、家庭或共同支出可拆成不同帳本，搭配雲端同步，讓資料在合適的範圍內流動。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bg-white border-y border-slate-200">
+            <div class="max-w-6xl mx-auto px-5 py-16">
+                <div class="max-w-2xl mb-10">
+                    <p class="text-sm font-bold text-teal-700 mb-3">從輸入到理解</p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mb-4">把日常收支變成清楚的財務脈絡</h2>
+                    <p class="text-slate-600 leading-relaxed">MyFinance Go 的設計重點不是堆功能，而是讓每個常用流程都能接上下一步。</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <span class="text-sm font-bold text-teal-700">01</span>
+                        <h3 class="font-bold text-slate-900 mt-3 mb-2">記錄</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">手動輸入、AI 文字解析，或從既有資料匯入。</p>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <span class="text-sm font-bold text-teal-700">02</span>
+                        <h3 class="font-bold text-slate-900 mt-3 mb-2">整理</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">分類、帳本、週期性收支與共享資料各自歸位。</p>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <span class="text-sm font-bold text-teal-700">03</span>
+                        <h3 class="font-bold text-slate-900 mt-3 mb-2">理解</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">用報表、趨勢、預算與洞察看見錢流變化。</p>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg p-5">
+                        <span class="text-sm font-bold text-teal-700">04</span>
+                        <h3 class="font-bold text-slate-900 mt-3 mb-2">行動</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">調整預算、檢視資產，或和共享成員對齊支出。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="max-w-6xl mx-auto px-5 py-16">
+            <div class="bg-slate-900 rounded-lg p-8 md:p-10 grid md:grid-cols-[1fr_auto] gap-6 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white mb-3">現在就開始整理你的財務紀錄</h2>
+                    <p class="text-slate-300 leading-relaxed">MyFinance Go 已可在 App Store 下載。若你需要支援，也可以透過網站的隱私權與客服入口找到完整資訊。</p>
+                </div>
+                <div class="flex flex-col sm:flex-row md:flex-col gap-3">
+                    <a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="bg-white text-slate-950 hover:bg-teal-50 px-6 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center">
                         <i class="fa-brands fa-apple mr-2 text-xl"></i> App Store
                     </a>
-                    <a href="about.html" class="bg-white border-2 border-slate-200 hover:border-indigo-200 hover:bg-indigo-50 text-slate-700 px-8 py-3 rounded-full font-bold transition-all flex items-center">
-                        認識作者
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 relative">
-                <!-- 裝飾用魔法光暈 -->
-                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-200 to-blue-100 rounded-full blur-3xl opacity-50 transform -translate-x-10 translate-y-10"></div>
-                <div class="relative bg-white border border-slate-100 p-8 rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
-                        <span class="font-bold text-slate-700">近期旅程花費</span>
-                        <i class="fa-solid fa-plane-departure text-indigo-400"></i>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-xl">
-                            <div class="flex items-center"><div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3"><i class="fa-solid fa-ticket"></i></div><span class="font-medium">巴黎機票</span></div>
-                            <span class="font-bold text-slate-800">-$32,000</span>
-                        </div>
-                        <div class="flex justify-between items-center p-3 bg-slate-50 rounded-xl">
-                            <div class="flex items-center"><div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mr-3"><i class="fa-solid fa-utensils"></i></div><span class="font-medium">塞納河畔晚餐</span></div>
-                            <span class="font-bold text-slate-800">-$3,500</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <section id="download" class="px-5 pb-24">
-            <div class="max-w-4xl mx-auto bg-slate-900 rounded-3xl p-10 text-center relative overflow-hidden shadow-2xl">
-                <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
-                <div class="relative z-10">
-                    <h2 class="text-3xl font-bold text-white mb-4">準備開始更輕鬆地整理財務紀錄了嗎？</h2>
-                    <p class="text-slate-300 mb-8 max-w-xl mx-auto">
-                        App Store 公開連結確認後可放置於此區域；若你需要支援或有任何問題，也可以直接聯絡開發者。
-                    </p>
-                    <a href="mailto:nicktim1113@icloud.com?subject=MyFinanceApp%20support" class="bg-white text-slate-900 hover:bg-indigo-50 px-8 py-4 rounded-full font-bold transition-all shadow-lg inline-flex items-center justify-center">
-                        <i class="fa-solid fa-envelope mr-2 text-xl"></i> 聯絡支援
+                    <a href="privacy.html" class="border border-slate-600 text-white hover:bg-slate-800 px-6 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved mr-2"></i> 隱私權政策
                     </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 城堡地下室 (Footer) -->
-    <footer class="bg-slate-900 text-slate-400 py-12 md:py-16 mt-auto">
+    <footer class="bg-white border-t border-slate-200 text-slate-500 py-12 mt-auto">
         <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
             <div>
-                <div class="flex items-center space-x-2 mb-4 text-white">
-                    <i class="fa-solid fa-wallet"></i>
-                    <span class="font-bold text-lg">MyFinanceApp</span>
+                <div class="flex items-center gap-2 mb-4 text-slate-900">
+                    <img src="assets/images/app-logo.png" alt="" class="w-8 h-8 rounded-lg">
+                    <span class="font-bold text-lg">MyFinance Go</span>
                 </div>
-                <p>專為熱愛探索世界的你，打造的智慧財務管理工具。</p>
+                <p>AI 輔助記帳、報表洞察與多帳本同步，為日常生活建立清楚的財務節奏。</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">快速連結</h4>
+                <h4 class="text-slate-900 font-bold mb-4">網站導覽</h4>
                 <ul class="space-y-2">
-                    <li><a href="index.html" class="hover:text-white transition-colors">網站首頁</a></li>
-                    <li><a href="about.html" class="hover:text-white transition-colors">關於開發者</a></li>
+                    <li><a href="index.html" class="hover:text-teal-700 transition-colors">首頁</a></li>
+                    <li><a href="features.html" class="hover:text-teal-700 transition-colors">功能特色</a></li>
+                    <li><a href="about.html" class="hover:text-teal-700 transition-colors">關於開發者</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">法律與支援</h4>
+                <h4 class="text-slate-900 font-bold mb-4">下載與支援</h4>
                 <ul class="space-y-2">
-                    <!-- 這裡連接到你剛剛做的隱私權政策檔案！ -->
-                    <li><a href="privacy.html" class="hover:text-white transition-colors">隱私權政策</a></li>
-                    <li><a href="mailto:nicktim1113@icloud.com" class="hover:text-white transition-colors">聯絡我們</a></li>
-                    <li><a href="en/index.html" class="hover:text-white transition-colors" lang="en">English</a></li>
-                    <li><a href="ja/index.html" class="hover:text-white transition-colors" lang="ja">日本語</a></li>
+                    <li><a href="https://apps.apple.com/us/app/myfinance-go/id6760079032" target="_blank" rel="noreferrer" class="hover:text-teal-700 transition-colors">App Store</a></li>
+                    <li><a href="privacy.html" class="hover:text-teal-700 transition-colors">隱私權政策</a></li>
+                    <li><a href="mailto:nicktim1113@icloud.com?subject=MyFinance%20Go%20support" class="hover:text-teal-700 transition-colors">聯絡支援</a></li>
+                    <li><a href="en/index.html" class="hover:text-teal-700 transition-colors" lang="en">English</a> · <a href="ja/index.html" class="hover:text-teal-700 transition-colors" lang="ja">日本語</a></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-800 text-center text-xs">
-            <p>© 2026 MyFinanceApp. All rights reserved.</p>
+        <div class="max-w-6xl mx-auto px-5 mt-8 pt-8 border-t border-slate-200 text-center text-xs">
+            <p>© 2026 MyFinance Go. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- 引入共用魔法咒語 (JavaScript) -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
