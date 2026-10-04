@@ -143,14 +143,14 @@
             <div class="mb-16 border-b border-slate-100 pb-10">
                 <div class="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold tracking-wider mb-6">
                     <span class="w-2 h-2 rounded-full bg-indigo-500 mr-2 animate-pulse"></span>
-                    Last updated: May 8, 2026
+                    Last updated: October 5, 2026
                 </div>
                 <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
                     Terms of Use & <br class="hidden lg:block">
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Privacy Policy</span>
                 </h1>
                 <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
-                    Welcome to <strong class="text-slate-800">MyFinance Go</strong> (the "App"). Before using the App, please read these Terms of Use and this Privacy Policy carefully. By downloading, installing, or using the App, you confirm that you have read, understood, and agreed to this policy.
+                    Welcome to <strong class="text-slate-800">MyFinance Go</strong> (the "App"). Before using the App, please read these Terms of Use and this Privacy Policy carefully. By downloading, installing, or using the App, you confirm that you have read, understood, and agreed to this policy. However, downloading, installing, or using the App, or accepting this policy, does not constitute consent to share data with third-party AI. Cloud AI data sharing requires your separate, explicit consent in the App.
                     <br><br>
                     <span class="bg-amber-50 text-amber-800 px-2 py-1 rounded font-medium text-sm">If you do not agree with this policy, please stop using and delete the App.</span>
                 </p>
@@ -258,15 +258,17 @@
 
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                                 <h3 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">3</span> AI Feature Data</h3>
-                                <p class="text-slate-600 mb-2">If you actively use the AI-assisted transaction parsing feature:</p>
-                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">The text you enter, together with limited context needed for parsing such as the current ledger, available categories, or language settings, may be sent through Firebase Cloud Functions to Google Gemini or another cloud AI service to help generate a transaction draft.</p>
-                                <p class="text-slate-600 mb-2">This data is used only to:</p>
+                                <p class="text-slate-600 mb-3"><strong>Version note:</strong> The prior-consent and withdrawal controls described below are available starting with version 1.1.14. If you use an older version and do not want data sent to third-party AI, avoid cloud AI and update when the new version is available. Consent for each purpose applies only to the current account and app session and can be withdrawn in Settings. Withdrawal does not delete data already sent.</p>
+                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">Cloud transaction parsing and financial insights use Google Gemini, a third-party AI service provided by Google. Data is processed through Firebase Cloud Functions before the content needed for the relevant purpose is sent to Google Gemini. Before transmission, the App explains the recipient, data, and purpose and asks for your explicit consent to that purpose.</p>
+                                <p class="text-slate-600 mb-2 font-semibold">Data sent by feature:</p>
                                 <ul class="list-disc pl-6 mb-3 text-slate-600 space-y-1">
-                                    <li>Parse transaction content</li>
-                                    <li>Return parsed results</li>
-                                    <li>Measure or limit AI usage quota and prevent abuse</li>
+                                    <li><strong>Cloud transaction parsing:</strong> Text you enter, paste, or import from another source, including voice transcripts or receipt recognition (OCR) text when used in this flow. Parsing context includes the current ledger name, up to 24 categories, up to 12 applicable local learning hints, income/expense direction, date and time, time zone, language, ledger base currency, and any supplied confirmed total and source information. This parsing path does not send original audio files or receipt images to Gemini.</li>
+                                    <li><strong>Financial insights and follow-up questions:</strong> The current report's ledger scope and identifiers, reporting and comparison periods, base currency, calculation mode, generation time, current and previous income/expenses/balance and their changes, and local summary; up to 10 category changes (names, identifiers, amounts, differences, counts, and transaction identifiers); up to 8 recurring income/expense impacts (titles, categories, dates, and amounts); up to 12 supporting transactions selected by amount (identifiers, dates, categories, amounts, income/expense direction, and notes); and any follow-up question you enter. This is not limited to anonymous aggregate totals. Notes and questions may contain personal information.</li>
+                                    <li><strong>Request and quota management:</strong> Firebase also processes account/App verification information, membership tier, request identifiers, and feature-specific information such as ledger/category identifiers, source types, or voice normalization metadata to provide the service, verify access, manage quotas, and prevent abuse. Category identifiers in transaction parsing are replaced with prompt codes before being sent to Gemini; financial insights include the identifiers in the report described above.</li>
                                 </ul>
-                                <p class="text-slate-500 text-sm italic">AI results are transaction drafts only. You can review and edit them before saving. The AI feature does not provide investment, tax, legal, or financial advice.</p>
+                                <p class="text-slate-600 mb-3"><strong>Your choices:</strong> You can agree to or cancel cloud AI data sharing. Without consent for the relevant purpose, the App will not send that cloud AI request. Canceling does not transmit the data for that request or use its cloud AI quota. You can still enter transactions manually, use on-device transaction parsing, or view local statistics and reports; viewing a local report does not generate cloud AI insights. Transaction parsing and financial insights are separate purposes, and consent to one does not replace consent to the other.</p>
+                                <p class="text-slate-600 mb-3">We use this data to generate reviewable transaction drafts, report explanations, or answers to follow-up questions, and to manage requests and quotas. Third-party processing remains subject to the provider's applicable terms and privacy policies. This policy does not promise that third parties never retain data or use it for model training. Do not include sensitive information in input text, transaction notes, or questions if you do not want it sent to third-party AI.</p>
+                                <p class="text-slate-500 text-sm italic">AI transaction results are drafts you can review and edit before saving. AI financial insights help explain reports and may be incomplete or incorrect. AI features do not provide investment, tax, legal, or financial advice.</p>
                             </div>
 
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -378,9 +380,9 @@
                             <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between">
                                 <div class="mb-2 sm:mb-0">
                                     <h3 class="font-bold text-slate-800 text-lg">AI Services</h3>
-                                    <p class="text-slate-500 text-sm mt-1">Google Gemini or other AI services used only when users actively request transaction text parsing</p>
+                                    <p class="text-slate-500 text-sm mt-1">Google Gemini (Google) receives transaction parsing or financial insight data through Firebase Cloud Functions with your explicit consent. See "AI Feature Data" above for the data shared and cancellation options.</p>
                                 </div>
-                                <span class="text-slate-400 text-sm italic">Used only to return parsing results</span>
+                                <span class="text-slate-400 text-sm italic">Transaction drafts, report explanations, and follow-up answers</span>
                             </div>
                         </div>
                     </div>
