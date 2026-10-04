@@ -162,7 +162,7 @@
             <div class="mb-16 border-b border-slate-100 pb-10">
                 <div class="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold tracking-wider mb-6">
                     <span class="w-2 h-2 rounded-full bg-indigo-500 mr-2 animate-pulse"></span>
-                    更新日期：2026 年 5 月 8 日
+                    更新日期：2026 年 10 月 5 日
                 </div>
                 <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
                     使用者條款與 <br class="hidden lg:block"/>
@@ -171,7 +171,7 @@
                     </span>
                 </h1>
                 <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
-                    歡迎您使用 <strong class="text-slate-800">MyFinance</strong>（以下稱「本應用程式」）。在您使用本應用程式前，請詳閱以下使用條款與隱私權政策。當您下載、安裝或使用本應用程式，即表示您已閱讀、理解並同意本政策之內容。<br/><br/>
+                    歡迎您使用 <strong class="text-slate-800">MyFinance</strong>（以下稱「本應用程式」）。在您使用本應用程式前，請詳閱以下使用條款與隱私權政策。當您下載、安裝或使用本應用程式，即表示您已閱讀、理解並同意本政策之內容。但下載、安裝、使用 App 或接受本政策，不代表您已同意將資料分享給第三方 AI；雲端 AI 資料分享另須取得您在 App 內的明確同意。<br/><br/>
                     <span class="bg-amber-50 text-amber-800 px-2 py-1 rounded font-medium text-sm">若您不同意本政策，請停止使用並刪除本應用程式。</span>
                 </p>
             </div>
@@ -282,15 +282,17 @@
                     
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                                 <h4 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">3</span> AI 功能資料</h4>
-                                <p class="text-slate-600 mb-2">若您主動使用 AI 交易解析功能：</p>
-                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">您輸入的文字，以及解析所需的有限上下文（例如目前帳本、可用分類或語言設定），可能會透過 Firebase Cloud Functions 傳送至 Google Gemini 或其他雲端 AI 服務進行分析，以協助產生交易草稿。</p>
-                                <p class="text-slate-600 mb-2">該資料僅用於：</p>
+                                <p class="text-slate-600 mb-3"><strong>版本說明：</strong>以下 App 內事前同意與撤回機制自 1.1.14 版起提供。若您仍使用舊版且不希望資料送至第三方 AI，請先不要使用雲端 AI，並在新版推出後更新。每項用途的同意僅適用目前帳號與本次 App 使用階段；可在設定撤回。撤回不會刪除先前已傳送的資料。</p>
+                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">雲端交易解析與財務洞察使用 Google Gemini（Google 提供的第三方 AI）。資料會先經 Firebase Cloud Functions 處理，再將該用途所需內容傳送至 Google Gemini。傳送前，App 會說明接收者、資料範圍與用途，並取得您對該用途的明確同意。</p>
+                                <p class="text-slate-600 mb-2 font-semibold">依功能傳送的內容：</p>
                                 <ul class="list-disc pl-6 mb-3 text-slate-600 space-y-1">
-                                    <li>解析交易內容</li>
-                                    <li>回傳解析結果</li>
-                                    <li>計算或限制 AI 使用額度，防止濫用</li>
+                                    <li><strong>雲端交易解析：</strong>您輸入、貼上或從外部匯入的文字；若語音轉寫或收據辨識（OCR）文字進入此流程，也包含該文字。另包含解析所需的目前帳本名稱、最多 24 個分類、最多 12 筆適用的本機學習提示、收支方向、日期與時間、時區、語言、帳本主幣，以及有提供時的確認總額與來源資訊。此解析路徑不會將原始語音檔或收據圖片傳送給 Gemini。</li>
+                                    <li><strong>財務洞察與追問：</strong>目前報表的帳本範圍與識別碼、統計及前期比較期間、主幣、計算模式、產生時間、本期及前期收入／支出／結餘與差額、本機摘要；最多 10 組分類變化（名稱、識別碼、金額、差額、筆數及交易識別碼）；最多 8 組固定收支影響（標題、分類、日期及金額）；最多 12 筆依金額選出的佐證交易（識別碼、日期、分類、金額、收支方向及備註）；以及您輸入的追問。這些資料並非只有匿名彙總金額，備註或追問也可能含有個人資訊。</li>
+                                    <li><strong>請求與額度管理：</strong>Firebase 另處理帳號／App 驗證資訊、會員等級、請求識別碼，以及功能所需的帳本／分類識別碼、來源種類或語音正規化等資訊，用於提供服務、驗證權限、計算額度與防止濫用。交易解析傳給 Gemini 的分類識別碼會替換為提示代碼；財務洞察則會傳送上述報表內的識別碼。</li>
                                 </ul>
-                                <p class="text-slate-500 text-sm italic">AI 解析結果僅作為交易草稿，使用者可在儲存前檢查與修改。AI 功能不提供投資、稅務、法律或財務建議。</p>
+                                <p class="text-slate-600 mb-3"><strong>您的選擇：</strong>您可以同意或取消雲端 AI 資料分享；未取得對應用途的同意時，不會送出該用途的雲端 AI 請求。取消不會傳送該次資料，也不會消耗該次雲端 AI 額度。您仍可手動記帳、使用本機交易解析或查看本機統計與報表；本機報表不會因此產生雲端 AI 洞察。交易解析與財務洞察是不同用途，一項同意不代替另一項同意。</p>
+                                <p class="text-slate-600 mb-3">我們將上述資料用於產生可檢查的交易草稿、報表解讀或追問回覆，以及管理請求與額度。第三方的資料處理仍受其適用條款及隱私政策規範；本政策不承諾第三方完全不保留資料或不將資料用於模型訓練。請勿在輸入文字、交易備註或追問中加入不希望傳送給第三方 AI 的敏感資訊。</p>
+                                <p class="text-slate-500 text-sm italic">AI 交易解析結果僅作為草稿，使用者可在儲存前檢查與修改。AI 財務洞察僅協助理解報表，結果可能不完整或不正確。AI 功能不提供投資、稅務、法律或財務建議。</p>
                             </div>
 
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -426,9 +428,9 @@
                             <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between">
                                 <div class="mb-2 sm:mb-0">
                                     <h5 class="font-bold text-slate-800 text-lg">AI 服務</h5>
-                                    <p class="text-slate-500 text-sm mt-1">Google Gemini 或其他 AI 服務，用於使用者主動觸發的交易文字解析</p>
+                                    <p class="text-slate-500 text-sm mt-1">Google Gemini（Google），經 Firebase Cloud Functions 接收使用者明確同意分享的交易解析或財務洞察資料；資料範圍與取消方式見上方「AI 功能資料」</p>
                                 </div>
-                                <span class="text-slate-400 text-sm italic">僅用於回傳解析結果</span>
+                                <span class="text-slate-400 text-sm italic">交易草稿、報表解讀與追問回覆</span>
                             </div>
                         </div>
                     </div>
