@@ -143,14 +143,14 @@
             <div class="mb-16 border-b border-slate-100 pb-10">
                 <div class="inline-flex items-center px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold tracking-wider mb-6">
                     <span class="w-2 h-2 rounded-full bg-indigo-500 mr-2 animate-pulse"></span>
-                    最終更新日：2026年5月8日
+                    最終更新日：2026年10月5日
                 </div>
                 <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
                     利用規約・<br class="hidden lg:block">
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">プライバシーポリシー</span>
                 </h1>
                 <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
-                    <strong class="text-slate-800">MyFinance</strong>（以下「本アプリ」）をご利用いただきありがとうございます。本アプリをご利用になる前に、以下の利用規約およびプライバシーポリシーをご確認ください。本アプリをダウンロード、インストールまたは利用した場合、お客様は本ポリシーの内容を確認し、同意したものとして取り扱われます。
+                    <strong class="text-slate-800">MyFinance</strong>（以下「本アプリ」）をご利用いただきありがとうございます。本アプリをご利用になる前に、以下の利用規約およびプライバシーポリシーをご確認ください。本アプリをダウンロード、インストールまたは利用した場合、お客様は本ポリシーの内容を確認し、同意したものとして取り扱われます。ただし、ダウンロード、インストール、利用または本ポリシーへの同意は、第三者AIへのデータ共有に対する同意を意味しません。クラウドAIへのデータ共有には、アプリ内で別途、明示的な同意が必要です。
                     <br><br>
                     <span class="bg-amber-50 text-amber-800 px-2 py-1 rounded font-medium text-sm">本ポリシーに同意されない場合は、本アプリの利用を中止し、端末から削除してください。</span>
                 </p>
@@ -258,15 +258,17 @@
 
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                                 <h3 class="text-lg font-semibold text-slate-800 mb-3 flex items-center"><span class="bg-indigo-100 text-indigo-600 w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">3</span> AI機能に関するデータ</h3>
-                                <p class="text-slate-600 mb-2">お客様がAIによる取引解析補助機能を自ら利用する場合、</p>
-                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">入力されたテキストおよび解析に必要な限定的な文脈情報（現在の帳簿、利用可能なカテゴリ、言語設定など）が、Firebase Cloud Functionsを通じてGoogle Geminiまたはその他のクラウドAIサービスへ送信される場合があります。これは、取引の下書きを生成するために使用されます。</p>
-                                <p class="text-slate-600 mb-2">このデータは、以下の目的に限って使用します。</p>
+                                <p class="text-slate-600 mb-3"><strong>バージョンについて：</strong>以下の事前同意・撤回機能はバージョン1.1.14から提供します。旧バージョンを使用中で第三者AIへの送信を希望しない場合は、クラウドAIを使わず、新バージョンの公開後に更新してください。用途ごとの同意は現在のアカウントと今回のアプリ使用中のみに適用され、設定で撤回できます。撤回しても送信済みのデータは削除されません。</p>
+                                <p class="text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg text-sm border-l-2 border-indigo-400">クラウド取引解析と家計レポートのAI分析には、Googleが提供する第三者AIサービスGoogle Geminiを使用します。データはFirebase Cloud Functionsで処理され、各目的に必要な内容がGoogle Geminiへ送信されます。送信前に、アプリは送信先、データの範囲、目的を説明し、その目的についてお客様の明示的な同意を求めます。</p>
+                                <p class="text-slate-600 mb-2 font-semibold">機能ごとに送信する内容：</p>
                                 <ul class="list-disc pl-6 mb-3 text-slate-600 space-y-1">
-                                    <li>取引内容の解析</li>
-                                    <li>解析結果の返却</li>
-                                    <li>AI利用枠の算定または制限、不正利用の防止</li>
+                                    <li><strong>クラウド取引解析：</strong>入力、貼り付け、外部から取り込んだテキスト。この処理に使用する音声の文字起こしやレシート認識（OCR）のテキストも含みます。解析用の情報には、現在の帳簿名、最大24件のカテゴリ、最大12件の該当する端末内学習ヒント、収支区分、日時、タイムゾーン、言語、帳簿の基準通貨、および提供された場合の確認済み合計額と入力元情報が含まれます。この解析経路では、元の音声ファイルやレシート画像をGeminiへ送信しません。</li>
+                                    <li><strong>家計レポートのAI分析と追加質問：</strong>現在のレポートの帳簿範囲と識別子、集計期間と比較対象期間、基準通貨、計算モード、生成時刻、当期・前期の収入／支出／収支とその差額、端末内の要約、最大10件のカテゴリ変動（名称、識別子、金額、差額、件数、取引識別子）、最大8件の定期収支の影響（タイトル、カテゴリ、日付、金額）、金額に基づいて選ばれた最大12件の根拠取引（識別子、日付、カテゴリ、金額、収支区分、メモ）、および入力した追加質問です。匿名の集計金額だけに限定されるものではなく、メモや質問には個人情報が含まれる場合があります。</li>
+                                    <li><strong>リクエストと利用枠の管理：</strong>Firebaseは、サービス提供、権限確認、利用枠管理、不正利用防止のため、アカウント／アプリの認証情報、会員区分、リクエスト識別子、および機能に必要な帳簿／カテゴリ識別子、入力元の種類、音声正規化などの情報も処理します。取引解析のカテゴリ識別子は、Geminiへの送信前にプロンプト用コードへ置き換えます。一方、家計レポートのAI分析では、上記のレポート内の識別子も送信します。</li>
                                 </ul>
-                                <p class="text-slate-500 text-sm italic">AIの解析結果は取引の下書きであり、保存前にお客様が確認および修正できます。AI機能は、投資、税務、法律または財務に関する助言を提供するものではありません。</p>
+                                <p class="text-slate-600 mb-3"><strong>お客様の選択：</strong>クラウドAIへのデータ共有に同意するか、キャンセルするかを選べます。該当する目的への同意がない場合、そのクラウドAIリクエストは送信されません。キャンセルしたリクエストのデータは送信されず、そのクラウドAI利用枠も消費しません。手動入力、端末内の取引解析、端末内の統計・レポート閲覧は引き続き利用できます。端末内レポートの閲覧だけでクラウドAI分析が生成されることはありません。取引解析とレポート分析は別の目的であり、一方への同意が他方への同意に代わることはありません。</p>
+                                <p class="text-slate-600 mb-3">これらのデータは、確認可能な取引の下書き、レポートの解説、追加質問への回答の生成、およびリクエストと利用枠の管理に使用します。第三者による処理には、その事業者の適用規約とプライバシーポリシーが適用されます。本ポリシーは、第三者がデータを一切保持しないことや、モデル学習に使用しないことを保証しません。第三者AIへ送信したくない機微情報は、入力テキスト、取引メモ、追加質問に含めないでください。</p>
+                                <p class="text-slate-500 text-sm italic">AI取引解析の結果は、保存前に確認・修正できる下書きです。家計レポートのAI分析は内容の理解を補助するもので、不完全または誤った結果を含む場合があります。AI機能は投資、税務、法律または財務に関する助言を提供しません。</p>
                             </div>
 
                             <div class="bg-white border border-slate-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -373,9 +375,9 @@
                             <div class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between">
                                 <div class="mb-2 sm:mb-0">
                                     <h3 class="font-bold text-slate-800 text-lg">AIサービス</h3>
-                                    <p class="text-slate-500 text-sm mt-1">Google Geminiまたはその他のAIサービスを、お客様が自ら取引テキスト解析を実行した場合に限り使用します。</p>
+                                    <p class="text-slate-500 text-sm mt-1">Google Gemini（Google）は、お客様の明示的な同意に基づき、Firebase Cloud Functionsを通じて取引解析または家計レポート分析のデータを受け取ります。共有する範囲とキャンセルの選択については、上記「AI機能に関するデータ」をご確認ください。</p>
                                 </div>
-                                <span class="text-slate-400 text-sm italic">解析結果の返却にのみ使用します</span>
+                                <span class="text-slate-400 text-sm italic">取引の下書き、レポート解説、追加質問への回答</span>
                             </div>
                         </div>
                     </div>
