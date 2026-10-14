@@ -88,17 +88,18 @@
 
         <section class="max-w-6xl mx-auto px-5 py-16">
             <div class="grid lg:grid-cols-2 gap-6">
-                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                <article id="voice-drafts" class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
                     <div class="w-12 h-12 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
                     </div>
                     <h2 class="text-2xl font-bold text-slate-950 mb-3">AIによる取引下書き</h2>
-                    <p class="text-slate-600 leading-relaxed mb-5">「朝食85、電車30、コーヒー120」などの自然な文章を入力すると、アプリが取引下書きとして整理します。AIは解析を補助し、保存前の確認は利用者が行います。</p>
+                    <p class="text-slate-600 leading-relaxed mb-5">収入や支出を音声やテキストで入力し、編集できる下書きに整理。認識された内容、金額、日付、カテゴリを確認してから保存します。自動で記帳が確定されることはありません。</p>
                     <ul class="space-y-2 text-sm text-slate-600">
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 金額、日付、カテゴリ、メモを確認してから保存</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 複数下書きとローカル解析の補助に対応</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 投資、税務、法律、財務に関する助言は行いません</li>
                     </ul>
+                    <p class="text-sm text-slate-600 leading-relaxed mt-5 border-t border-slate-100 pt-4">無料版には毎月50回の端末上スマート解析を含みます。クラウドAIは会員プランに応じて利用でき、共有する情報の説明後に同意を確認します。キャンセルや設定からの同意撤回も可能です。</p>
                 </article>
 
                 <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
@@ -114,14 +115,14 @@
                     </ul>
                 </article>
 
-                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                <article id="shared-ledgers" class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
                     <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-book-open text-xl"></i>
                     </div>
                     <h2 class="text-2xl font-bold text-slate-950 mb-3">複数帳簿と共有同期</h2>
-                    <p class="text-slate-600 leading-relaxed mb-5">日常、旅行、家族、共同支出などを別々の帳簿で管理できます。ログインすると、クラウド同期や共有帳簿を利用できます。</p>
+                    <p class="text-slate-600 leading-relaxed mb-5">家族や旅行、共同生活のお金をひとつの共有帳簿で整理。収入と支出を一緒に記録し、カテゴリ別レポートで振り返れます。共同記録、メンバーの招待、作成できる帳簿数は会員プランに応じて提供されます。</p>
                     <ul class="space-y-2 text-sm text-slate-600">
-                        <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> SwiftDataのローカル記録とFirebase同期</li>
+                        <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 個人のお金と共同の支出を分けて整理</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 帳簿切り替え、共有メンバー、共同管理の流れ</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 個人、パートナー、家族、旅行グループに対応</li>
                     </ul>
@@ -151,9 +152,10 @@
                         <p class="text-slate-600 leading-relaxed">MyFinanceは無料の基本版に加え、任意のサブスクリプションと買い切り型モジュールを用意しています。このサイトでは機能を紹介し、購入処理はApple App Store / StoreKitで行われます。</p>
                     </div>
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <div class="border border-slate-200 rounded-lg p-5">
-                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-file-csv text-emerald-600 mr-2"></i> CSVインポート・エクスポート</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">過去の記録整理、バックアップ、他の管理方法からの移行に役立ちます。</p>
+                        <div id="csv-migration" class="border border-slate-200 rounded-lg p-5">
+                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-file-csv text-emerald-600 mr-2" aria-hidden="true"></i> 他のアプリから移行</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">対応形式CSVを選択 → プレビューで確認 → 確認後に取り込み。この移行機能は無料で、現在は基本通貨がTWDの帳簿に限られます。すべてのCSV形式に対応しているわけではありません。</p>
+                            <p class="text-sm text-slate-600 leading-relaxed mt-3">MyFinance標準CSVのインポートとCSVエクスポートは、別売りの買い切り機能です。形式と利用条件はアプリ内で確認し、移行前に元データとバックアップを保管してください。</p>
                         </div>
                         <div class="border border-slate-200 rounded-lg p-5">
                             <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-rotate-left text-blue-600 mr-2"></i> バックアップと購入の復元</h3>
