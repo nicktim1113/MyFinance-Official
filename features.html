@@ -88,17 +88,18 @@
 
         <section class="max-w-6xl mx-auto px-5 py-16">
             <div class="grid lg:grid-cols-2 gap-6">
-                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                <article id="voice-drafts" class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
                     <div class="w-12 h-12 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
                     </div>
                     <h2 class="text-2xl font-bold text-slate-950 mb-3">AI 交易草稿</h2>
-                    <p class="text-slate-600 leading-relaxed mb-5">輸入「今天早餐 85、捷運 30、咖啡 120」這類自然語句，App 會整理成可確認的多筆交易草稿。AI 協助的是解析與歸納，不會跳過你的檢查。</p>
+                    <p class="text-slate-600 leading-relaxed mb-5">用語音或文字描述日常收入與支出，整理成可編輯的多筆交易草稿。先檢查辨識內容、金額、日期與分類，確認後再儲存，不會直接自動入帳。</p>
                     <ul class="space-y-2 text-sm text-slate-600">
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 金額、日期、分類、備註可先確認再儲存</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 支援多筆草稿與本機備援解析</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> AI 不提供投資、稅務、法律或財務建議</li>
                     </ul>
+                    <p class="text-sm text-slate-600 leading-relaxed mt-5 border-t border-slate-100 pt-4">免費版含每月 50 次本機智慧解析；雲端 AI 依會員方案提供，使用前會說明分享內容並取得同意，可取消或在設定撤回。</p>
                 </article>
 
                 <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
@@ -114,14 +115,14 @@
                     </ul>
                 </article>
 
-                <article class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
+                <article id="shared-ledgers" class="bg-white border border-slate-200 rounded-lg p-6 md:p-8">
                     <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center mb-5">
                         <i class="fa-solid fa-book-open text-xl"></i>
                     </div>
                     <h2 class="text-2xl font-bold text-slate-950 mb-3">多帳本與共享同步</h2>
-                    <p class="text-slate-600 leading-relaxed mb-5">日常、旅行、家庭或共同支出可以拆成不同帳本。登入後可使用雲端同步與共享帳本，讓需要一起管理的人看到同一份資料。</p>
+                    <p class="text-slate-600 leading-relaxed mb-5">把家庭、旅行或室友的共同花費整理在同一本帳，一起記錄收入與支出，再用分類報表回顧。共享協作、邀請成員與可建立的帳本數，依會員方案提供。</p>
                     <ul class="space-y-2 text-sm text-slate-600">
-                        <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> SwiftData 本機資料搭配 Firebase 同步</li>
+                        <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 個人收支與共同支出可分開整理</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 帳本切換、共享成員與協作流程</li>
                         <li><i class="fa-solid fa-check text-indigo-600 mr-2"></i> 適合個人、伴侶、家庭與旅行共同支出</li>
                     </ul>
@@ -151,9 +152,10 @@
                         <p class="text-slate-600 leading-relaxed">MyFinance 採用免費基本版加上可選訂閱與一次性功能模組。網站只介紹功能與入口，所有購買都由 Apple App Store / StoreKit 處理。</p>
                     </div>
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <div class="border border-slate-200 rounded-lg p-5">
-                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-file-csv text-emerald-600 mr-2"></i> CSV 匯入與匯出</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">適合整理舊帳、備份資料，或從其他工具轉移到新的帳本流程。</p>
+                        <div id="csv-migration" class="border border-slate-200 rounded-lg p-5">
+                            <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-file-csv text-emerald-600 mr-2" aria-hidden="true"></i> 從其他 App 轉入</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">選擇支援格式的 CSV → 檢查預覽 → 確認後寫入。此轉入入口免費，目前限台幣（TWD）目標帳本，並非所有 CSV 格式皆支援。</p>
+                            <p class="text-sm text-slate-600 leading-relaxed mt-3">MyFinance 標準 CSV 匯入與 CSV 匯出是另外的一次性購買模組。實際格式與權益請在 App 內確認，匯入前建議先保留原始資料及備份。</p>
                         </div>
                         <div class="border border-slate-200 rounded-lg p-5">
                             <h3 class="font-bold text-slate-900 mb-2"><i class="fa-solid fa-rotate-left text-blue-600 mr-2"></i> 備份與恢復購買</h3>

@@ -92,10 +92,10 @@
           },
           {
             "@type": "Question",
-            "name": "英語ページでMyFinance Goと表記している理由は？",
+            "name": "ウェブサイトとApp Storeのアプリは同じものですか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "英語圏およびApp Store上の名称重複を避けるため、英語の掲載名にはMyFinance Goを使用しています。中国語・日本語ではMyFinanceとして表記しています。"
+              "text": "はい。ウェブサイトではMyFinanceというブランド名を使い、英語のApp StoreではMyFinance: Expense Trackerとして掲載しています。App ID 6760079032の同じアプリです。このサイトのApp Storeリンクからダウンロードしてください。"
             }
           }
         ]
@@ -213,22 +213,36 @@
             </div>
         </section>
 
-        <section class="max-w-6xl mx-auto px-5 py-16">
+        <section id="scenarios" class="max-w-6xl mx-auto px-5 py-16" aria-labelledby="scenarios-title">
+            <div class="max-w-2xl mb-8">
+                <p class="text-sm font-bold text-indigo-600 mb-3">いつもの記帳に合わせて</p>
+                <h2 id="scenarios-title" class="text-3xl font-extrabold text-slate-950 mb-4">入力を減らす。一緒に記録する。過去の記録を引き継ぐ。</h2>
+                <p class="text-slate-600 leading-relaxed">今の暮らしに合う使い方と、利用できる条件をご確認ください。</p>
+            </div>
             <div class="grid md:grid-cols-3 gap-5">
-                <article class="bg-white border border-slate-200 rounded-lg p-6">
-                    <i class="fa-solid fa-pen-to-square text-indigo-600 text-2xl mb-5"></i>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3">すばやく入力し、保存前に確認</h2>
-                    <p class="text-slate-600 leading-relaxed">短い文章から取引下書きを作成し、金額・日付・カテゴリ・メモを確認してから保存できます。</p>
+                <article id="voice-drafts" class="bg-white border border-slate-200 rounded-lg p-6 flex flex-col">
+                    <i class="fa-solid fa-pen-to-square text-indigo-600 text-2xl mb-5" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">話して、確認して、記帳。</h3>
+                    <p class="text-slate-600 leading-relaxed">日々の支出を音声やテキストから下書きに整理。金額・日付・カテゴリを確認してから帳簿に保存できます。</p>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-4 mb-5">無料版には毎月50回の端末上スマート解析を含みます。クラウドAIは会員プランに応じて利用できます。</p>
+                    <a href="features.html#voice-drafts" class="mt-auto font-semibold text-indigo-600 hover:text-indigo-800 inline-flex items-center gap-2">音声と下書きについて <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="https://apps.apple.com/app/apple-store/id6760079032?pt=128098410&amp;ct=web_ai_202610&amp;mt=8" target="_blank" rel="noreferrer" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-lg font-semibold text-center">App Storeで見る</a>
                 </article>
-                <article class="bg-white border border-slate-200 rounded-lg p-6">
-                    <i class="fa-solid fa-chart-column text-blue-600 text-2xl mb-5"></i>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3">行動につながるレポート</h2>
-                    <p class="text-slate-600 leading-relaxed">ダッシュボード、推移、カテゴリ別集計、予算、資産を通じて、記録を次の判断につなげます。</p>
+                <article id="shared-ledgers" class="bg-white border border-slate-200 rounded-lg p-6 flex flex-col">
+                    <i class="fa-solid fa-people-arrows text-amber-600 text-2xl mb-5" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">共同の支出を、ひとつの帳簿に。</h3>
+                    <p class="text-slate-600 leading-relaxed">家族や旅行、共同生活のお金を一緒に記録。収入と支出を整理し、カテゴリ別レポートで振り返れます。</p>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-4 mb-5">メンバーの招待、共同記録、作成できる帳簿数は会員プランに応じて提供されます。</p>
+                    <a href="features.html#shared-ledgers" class="mt-auto font-semibold text-indigo-600 hover:text-indigo-800 inline-flex items-center gap-2">共有帳簿について <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="https://apps.apple.com/app/apple-store/id6760079032?pt=128098410&amp;ct=web_shared_202610&amp;mt=8" target="_blank" rel="noreferrer" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-lg font-semibold text-center">App Storeで見る</a>
                 </article>
-                <article class="bg-white border border-slate-200 rounded-lg p-6">
-                    <i class="fa-solid fa-people-arrows text-amber-600 text-2xl mb-5"></i>
-                    <h2 class="text-xl font-bold text-slate-900 mb-3">個人帳簿も共有帳簿も</h2>
-                    <p class="text-slate-600 leading-relaxed">日常、旅行、家族、共同支出などを帳簿ごとに分け、必要な範囲で同期できます。</p>
+                <article id="csv-migration" class="bg-white border border-slate-200 rounded-lg p-6 flex flex-col">
+                    <i class="fa-solid fa-file-csv text-emerald-600 text-2xl mb-5" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">過去の記録を、確認してから移行。</h3>
+                    <p class="text-slate-600 leading-relaxed">他のアプリの対応形式CSVを選び、プレビューで内容を確認してから取り込めます。</p>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-4 mb-5">移行機能は無料で、現在はTWD帳簿が対象です。MyFinance標準CSVのインポート・エクスポート機能は別売りです。</p>
+                    <a href="features.html#csv-migration" class="mt-auto font-semibold text-indigo-600 hover:text-indigo-800 inline-flex items-center gap-2">CSV移行の条件を確認 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="https://apps.apple.com/app/apple-store/id6760079032?pt=128098410&amp;ct=web_csv_202610&amp;mt=8" target="_blank" rel="noreferrer" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-lg font-semibold text-center">App Storeで見る</a>
                 </article>
             </div>
         </section>
@@ -329,8 +343,8 @@
                             <p class="mt-3 text-sm text-slate-600 leading-relaxed">いいえ。MyFinanceは個人の財務記録を販売しません。データの利用目的はプライバシーポリシーで明記しています。</p>
                         </details>
                         <details class="group border border-slate-200 rounded-lg bg-white p-5">
-                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">英語ページでMyFinance Goと表記している理由は？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
-                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">英語圏およびApp Store上の名称重複を避けるため、英語の掲載名にはMyFinance Goを使用しています。中国語・日本語ではMyFinanceとして表記しています。</p>
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-slate-900">ウェブサイトとApp Storeのアプリは同じものですか？<i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform"></i></summary>
+                            <p class="mt-3 text-sm text-slate-600 leading-relaxed">はい。ウェブサイトではMyFinanceというブランド名を使い、英語のApp StoreではMyFinance: Expense Trackerとして掲載しています。App ID 6760079032の同じアプリです。このサイトのApp Storeリンクからダウンロードしてください。</p>
                         </details>
                     </div>
                 </div>
