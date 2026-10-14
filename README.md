@@ -4,8 +4,8 @@ MyFinance official static website for GitHub Pages. The site introduces the rele
 
 ## Brand Naming
 
-- Traditional Chinese and Japanese pages use `MyFinance`.
-- English pages and the App Store listing use `MyFinance Go` to avoid naming conflicts in the English/App Store market.
+- All website locales use the `MyFinance` brand.
+- The English App Store listing is `MyFinance: Expense Tracker` (App ID `6760079032`). Website FAQs and structured data use the same product identity.
 - The logo asset is shared across all locales and should not be recolored unless the app icon itself changes.
 
 ## Site Structure
@@ -42,13 +42,14 @@ Then open `http://127.0.0.1:8000/index.html`.
 
 ## Publishing
 
-GitHub Pages is published from `origin/main`. Before pushing, run:
+GitHub Pages is published from `origin/main`. For content-only changes, run:
 
 ```bash
-node tools/build-site-assets.mjs
 node tools/check-site.mjs
 git diff --check
 ```
+
+Run `node tools/build-site-assets.mjs` only when intentionally regenerating the sitemap, manifest, icons, or social preview assets, and inspect those changes before publishing.
 
 ## Content Notes
 
