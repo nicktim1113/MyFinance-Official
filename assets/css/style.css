@@ -12,6 +12,14 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+/* Keep campaign anchors clear of the existing sticky navigation. */
+#scenarios,
+#voice-drafts,
+#shared-ledgers,
+#csv-migration {
+    scroll-margin-top: 6rem;
+}
+
 body.is-menu-open {
     overflow: hidden;
 }
