@@ -13,10 +13,10 @@ export const site = {
       description: 'MyFinance 是已在 App Store 上架的個人財務管理 App，提供快速記帳、AI 交易草稿、多帳本、雲端同步、報表洞察、預算與資產管理。'
     },
     en: {
-      brand: 'MyFinance Go',
+      brand: 'MyFinance',
       pathPrefix: 'en/',
-      title: 'MyFinance Go - AI-Assisted Expense Tracking and Personal Finance',
-      description: 'MyFinance Go is a personal finance app on the App Store with quick expense tracking, AI-assisted transaction drafts, multiple ledgers, cloud sync, reports, budgets, and asset management.'
+      title: 'MyFinance - AI-Assisted Expense Tracking and Personal Finance',
+      description: 'MyFinance is a personal finance app on the App Store with quick expense tracking, AI-assisted transaction drafts, multiple ledgers, cloud sync, reports, budgets, and asset management.'
     },
     ja: {
       brand: 'MyFinance',
